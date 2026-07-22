@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="پروپوزال طراحی و پیاده‌سازی سامانه یکپارچه هوشمند مدیریت انبار، دارایی‌های فیزیکی و آمادگی لجستیکی">
+  <meta name="theme-color" content="#0d1f1d">
+  <title>پروپوزال طراحی و پیاده‌سازی سامانه یکپارچه هوشمند مدیریت انبار، دارایی‌های فیزیکی و آمادگی لجستیکی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="بازگشت به ابتدای صفحه">
+      <span class="brand-mark">IA</span>
+      <span><strong>IALR-C2</strong><small>پروپوزال سامانه هوشمند لجستیک</small></span>
+    </a>
+    <div class="topbar-actions">
+      <button class="icon-button" id="themeToggle" type="button" aria-label="تغییر پوسته" title="تغییر پوسته">◐</button>
+      <button class="icon-button" id="printButton" type="button" aria-label="چاپ صفحه" title="چاپ صفحه">⎙</button>
+      <button class="menu-button" id="menuButton" type="button" aria-controls="sidebar" aria-expanded="false">فهرست</button>
+    </div>
+  </header>
+
+  <div class="page-shell" id="top">
+    <aside class="sidebar" id="sidebar" aria-label="فهرست مطالب">
+      <div class="sidebar-head">
+        <div><span class="eyebrow">راهنمای سند</span><h2>فهرست مطالب</h2></div>
+        <button class="sidebar-close" id="menuClose" type="button" aria-label="بستن فهرست">×</button>
+      </div>
+      <label class="toc-search">
+        <span class="sr-only">جست‌وجو در فهرست</span>
+        <input id="tocSearch" type="search" placeholder="جست‌وجوی فصل…" autocomplete="off">
+      </label>
+      <nav class="toc-nav"><ol class="toc-list"><li data-title="۱. چکیده"><a class="toc-main-link" href="#section-1"><span>01</span>چکیده</a></li><li data-title="۲. کلیدواژه‌ها"><a class="toc-main-link" href="#section-2"><span>02</span>کلیدواژه‌ها</a></li><li data-title="۳. مقدمه"><a class="toc-main-link" href="#section-3"><span>03</span>مقدمه</a></li><li data-title="۴. بیان مسئله"><a class="toc-main-link" href="#section-4"><span>04</span>بیان مسئله</a><ul class="toc-sublist"><li><a href="#section-4-1">۴-۱. پراکندگی اطلاعات</a></li><li><a href="#section-4-2">۴-۲. محدودبودن مدیریت به ثبت موجودی</a></li><li><a href="#section-4-3">۴-۳. مغایرت میان موجودی ثبت‌شده و موجودی فیزیکی</a></li><li><a href="#section-4-4">۴-۴. ضعف در ردیابی زنجیره مسئولیت</a></li><li><a href="#section-4-5">۴-۵. تأخیر در نگهداری و تعمیرات</a></li><li><a href="#section-4-6">۴-۶. موجودی راکد و توزیع نامتوازن</a></li><li><a href="#section-4-7">۴-۷. دسترسی دشوار به آیین‌نامه‌ها و دستورالعمل‌ها</a></li><li><a href="#section-4-8">۴-۸. محدودیت سامانه‌های هوش مصنوعی عمومی</a></li><li><a href="#section-4-9">۴-۹. صورت مسئله اصلی</a></li></ul></li><li data-title="۵. ضرورت و اهمیت اجرای طرح"><a class="toc-main-link" href="#section-5"><span>05</span>ضرورت و اهمیت اجرای طرح</a><ul class="toc-sublist"><li><a href="#section-5-1">۵-۱. حفظ ارزش سرمایه‌های فیزیکی</a></li><li><a href="#section-5-2">۵-۲. افزایش آمادگی سازمانی</a></li><li><a href="#section-5-3">۵-۳. بهبود پاسخ‌گویی و ممیزی</a></li><li><a href="#section-5-4">۵-۴. جلوگیری از اتلاف دانش سازمانی</a></li><li><a href="#section-5-5">۵-۵. کاهش زمان تصمیم‌گیری</a></li><li><a href="#section-5-6">۵-۶. حرکت از مدیریت واکنشی به مدیریت پیش‌نگر</a></li><li><a href="#section-5-7">۵-۷. افزایش امنیت و کنترل دسترسی</a></li></ul></li><li data-title="۶. هدف اصلی طرح"><a class="toc-main-link" href="#section-6"><span>06</span>هدف اصلی طرح</a></li><li data-title="۷. اهداف فرعی"><a class="toc-main-link" href="#section-7"><span>07</span>اهداف فرعی</a></li><li data-title="۸. پرسش‌های پژوهش"><a class="toc-main-link" href="#section-8"><span>08</span>پرسش‌های پژوهش</a><ul class="toc-sublist"><li><a href="#section-8-1">۸-۱. پرسش اصلی</a></li><li><a href="#section-8-2">۸-۲. پرسش‌های فرعی</a></li></ul></li><li data-title="۹. فرضیه‌های پژوهش"><a class="toc-main-link" href="#section-9"><span>09</span>فرضیه‌های پژوهش</a></li><li data-title="۱۰. دامنه و محدوده طرح"><a class="toc-main-link" href="#section-10"><span>10</span>دامنه و محدوده طرح</a><ul class="toc-sublist"><li><a href="#section-10-1">۱۰-۱. دامنه دارایی‌ها</a></li><li><a href="#section-10-2">۱۰-۲. دامنه سازمانی نمونه اولیه</a></li><li><a href="#section-10-3">۱۰-۳. موارد خارج از محدوده نمونه اولیه</a></li></ul></li><li data-title="۱۱. ذی‌نفعان سامانه"><a class="toc-main-link" href="#section-11"><span>11</span>ذی‌نفعان سامانه</a><ul class="toc-sublist"><li><a href="#section-11-1">۱۱-۱. مسئول انبار</a></li><li><a href="#section-11-2">۱۱-۲. مسئول فنی و تعمیرات</a></li><li><a href="#section-11-3">۱۱-۳. مدیر لجستیک</a></li><li><a href="#section-11-4">۱۱-۴. بازرس یا حسابرس</a></li><li><a href="#section-11-5">۱۱-۵. مدیر ارشد</a></li><li><a href="#section-11-6">۱۱-۶. مدیر سامانه و مسئول امنیت</a></li></ul></li><li data-title="۱۲. مفهوم شناسنامه دیجیتال دارایی"><a class="toc-main-link" href="#section-12"><span>12</span>مفهوم شناسنامه دیجیتال دارایی</a><ul class="toc-sublist"><li><a href="#section-12-1">۱۲-۱. اطلاعات هویتی</a></li><li><a href="#section-12-2">۱۲-۲. اطلاعات مالکیت و استقرار</a></li><li><a href="#section-12-3">۱۲-۳. اطلاعات فنی</a></li><li><a href="#section-12-4">۱۲-۴. اطلاعات مالی و اقتصادی</a></li><li><a href="#section-12-5">۱۲-۵. سوابق رویدادها</a></li><li><a href="#section-12-6">۱۲-۶. اسناد مرتبط</a></li></ul></li><li data-title="۱۳. دوقلوی دیجیتال دارایی"><a class="toc-main-link" href="#section-13"><span>13</span>دوقلوی دیجیتال دارایی</a></li><li data-title="۱۴. شاخص آمادگی دارایی"><a class="toc-main-link" href="#section-14"><span>14</span>شاخص آمادگی دارایی</a><ul class="toc-sublist"><li><a href="#section-14-1">۱۴-۱. معیارهای پیشنهادی</a></li><li><a href="#section-14-2">۱۴-۲. فرمول مفهومی</a></li><li><a href="#section-14-3">۱۴-۳. طبقه‌بندی پیشنهادی</a></li></ul></li><li data-title="۱۵. معماری کلان سامانه"><a class="toc-main-link" href="#section-15"><span>15</span>معماری کلان سامانه</a><ul class="toc-sublist"><li><a href="#section-15-1">۱۵-۱. لایه منابع داده</a></li><li><a href="#section-15-2">۱۵-۲. لایه جمع‌آوری و یکپارچه‌سازی</a></li><li><a href="#section-15-3">۱۵-۳. پایگاه داده تراکنشی</a></li><li><a href="#section-15-4">۱۵-۴. مخزن اسناد</a></li><li><a href="#section-15-5">۱۵-۵. پایگاه برداری</a></li><li><a href="#section-15-6">۱۵-۶. گراف دانش</a></li><li><a href="#section-15-7">۱۵-۷. موتور DSS</a></li><li><a href="#section-15-8">۱۵-۸. موتور RAG</a></li><li><a href="#section-15-9">۱۵-۹. مدل زبانی</a></li><li><a href="#section-15-10">۱۵-۱۰. رابط کاربری و داشبورد</a></li></ul></li><li data-title="۱۶. معماری rag چندلایه"><a class="toc-main-link" href="#section-16"><span>16</span>معماری RAG چندلایه</a><ul class="toc-sublist"><li><a href="#section-16-1">۱۶-۱. Structured RAG</a></li><li><a href="#section-16-2">۱۶-۲. Document RAG</a></li><li><a href="#section-16-3">۱۶-۳. Graph RAG</a></li><li><a href="#section-16-4">۱۶-۴. Temporal RAG</a></li></ul></li><li data-title="۱۷. گواهی شواهد پاسخ"><a class="toc-main-link" href="#section-17"><span>17</span>گواهی شواهد پاسخ</a></li><li data-title="۱۸. زیرسامانه‌های پیشنهادی"><a class="toc-main-link" href="#section-18"><span>18</span>زیرسامانه‌های پیشنهادی</a><ul class="toc-sublist"><li><a href="#section-18-1">۱۸-۱. زیرسامانه ثبت و طبقه‌بندی دارایی</a></li><li><a href="#section-18-2">۱۸-۲. زیرسامانه ورود، خروج و انتقال</a></li><li><a href="#section-18-3">۱۸-۳. زیرسامانه تحویل و تحول</a></li><li><a href="#section-18-4">۱۸-۴. زیرسامانه شمارش و مغایرت</a></li><li><a href="#section-18-5">۱۸-۵. زیرسامانه نگهداری و تعمیرات</a></li><li><a href="#section-18-6">۱۸-۶. زیرسامانه مدیریت تاریخ اعتبار</a></li><li><a href="#section-18-7">۱۸-۷. زیرسامانه مدیریت موجودی</a></li><li><a href="#section-18-8">۱۸-۸. زیرسامانه پیش‌بینی نیاز</a></li><li><a href="#section-18-9">۱۸-۹. زیرسامانه مدیریت دانش</a></li><li><a href="#section-18-10">۱۸-۱۰. زیرسامانه کشف ناهنجاری</a></li><li><a href="#section-18-11">۱۸-۱۱. زیرسامانه تحلیل سناریو</a></li></ul></li><li data-title="۱۹. نمونه سناریوهای استفاده"><a class="toc-main-link" href="#section-19"><span>19</span>نمونه سناریوهای استفاده</a></li><li data-title="۲۰. روش تحقیق و اجرای پروژه"><a class="toc-main-link" href="#section-20"><span>20</span>روش تحقیق و اجرای پروژه</a></li><li data-title="۲۱. فناوری‌های پیشنهادی"><a class="toc-main-link" href="#section-21"><span>21</span>فناوری‌های پیشنهادی</a></li><li data-title="۲۲. الزامات امنیتی"><a class="toc-main-link" href="#section-22"><span>22</span>الزامات امنیتی</a><ul class="toc-sublist"><li><a href="#section-22-1">۲۲-۱. استقرار داخلی</a></li><li><a href="#section-22-2">۲۲-۲. کنترل دسترسی</a></li><li><a href="#section-22-3">۲۲-۳. اعمال مجوز قبل از بازیابی</a></li><li><a href="#section-22-4">۲۲-۴. ثبت رویداد</a></li><li><a href="#section-22-5">۲۲-۵. تأیید انسانی</a></li><li><a href="#section-22-6">۲۲-۶. امنیت مدل زبانی</a></li><li><a href="#section-22-7">۲۲-۷. معماری Zero Trust</a></li></ul></li><li data-title="۲۳. مدیریت ریسک هوش مصنوعی"><a class="toc-main-link" href="#section-23"><span>23</span>مدیریت ریسک هوش مصنوعی</a></li><li data-title="۲۴. معیارهای ارزیابی"><a class="toc-main-link" href="#section-24"><span>24</span>معیارهای ارزیابی</a><ul class="toc-sublist"><li><a href="#section-24-1">۲۴-۱. معیارهای انبارداری</a></li><li><a href="#section-24-2">۲۴-۲. معیارهای مدیریت دارایی</a></li><li><a href="#section-24-3">۲۴-۳. معیارهای RAG</a></li><li><a href="#section-24-4">۲۴-۴. معیارهای DSS</a></li><li><a href="#section-24-5">۲۴-۵. معیارهای امنیتی</a></li><li><a href="#section-24-6">۲۴-۶. معیارهای کاربری</a></li></ul></li><li data-title="۲۵. طراحی آزمایش"><a class="toc-main-link" href="#section-25"><span>25</span>طراحی آزمایش</a></li><li data-title="۲۶. الزامات آزمون و اعتبارسنجی"><a class="toc-main-link" href="#section-26"><span>26</span>الزامات آزمون و اعتبارسنجی</a></li><li data-title="۲۷. نوآوری‌های طرح"><a class="toc-main-link" href="#section-27"><span>27</span>نوآوری‌های طرح</a><ul class="toc-sublist"><li><a href="#section-27-1">۲۷-۱. ترکیب انبارداری و مدیریت چرخه عمر</a></li><li><a href="#section-27-2">۲۷-۲. شناسنامه دیجیتال و دوقلوی دیجیتال</a></li><li><a href="#section-27-3">۲۷-۳. ترکیب DSS و LLM</a></li><li><a href="#section-27-4">۲۷-۴. RAG چندلایه</a></li><li><a href="#section-27-5">۲۷-۵. گراف دانش دارایی‌ها</a></li><li><a href="#section-27-6">۲۷-۶. امتیاز آمادگی قابل‌توضیح</a></li><li><a href="#section-27-7">۲۷-۷. گواهی شواهد</a></li><li><a href="#section-27-8">۲۷-۸. معماری حساس به مجوز</a></li><li><a href="#section-27-9">۲۷-۹. تحلیل سناریو</a></li><li><a href="#section-27-10">۲۷-۱۰. طراحی آفلاین‌محور</a></li></ul></li><li data-title="۲۸. محدودیت‌های احتمالی"><a class="toc-main-link" href="#section-28"><span>28</span>محدودیت‌های احتمالی</a></li><li data-title="۲۹. راهکارهای کاهش محدودیت‌ها"><a class="toc-main-link" href="#section-29"><span>29</span>راهکارهای کاهش محدودیت‌ها</a></li><li data-title="۳۰. ساختار اجرایی پروژه"><a class="toc-main-link" href="#section-30"><span>30</span>ساختار اجرایی پروژه</a></li><li data-title="۳۱. زمان‌بندی پیشنهادی"><a class="toc-main-link" href="#section-31"><span>31</span>زمان‌بندی پیشنهادی</a></li><li data-title="۳۲. مراحل بلوغ پروژه"><a class="toc-main-link" href="#section-32"><span>32</span>مراحل بلوغ پروژه</a></li><li data-title="۳۳. خروجی‌های قابل تحویل"><a class="toc-main-link" href="#section-33"><span>33</span>خروجی‌های قابل تحویل</a></li><li data-title="۳۴. منافع مورد انتظار"><a class="toc-main-link" href="#section-34"><span>34</span>منافع مورد انتظار</a></li><li data-title="۳۵. تحلیل هزینه و فایده"><a class="toc-main-link" href="#section-35"><span>35</span>تحلیل هزینه و فایده</a></li><li data-title="۳۶. ریسک‌های اجرایی"><a class="toc-main-link" href="#section-36"><span>36</span>ریسک‌های اجرایی</a></li><li data-title="۳۷. حداقل محصول قابل ارائه یا mvp"><a class="toc-main-link" href="#section-37"><span>37</span>حداقل محصول قابل ارائه یا MVP</a></li><li data-title="۳۸. سناریوی پیشنهادی برای ارائه نهایی"><a class="toc-main-link" href="#section-38"><span>38</span>سناریوی پیشنهادی برای ارائه نهایی</a></li><li data-title="۳۹. نتیجه‌گیری"><a class="toc-main-link" href="#section-39"><span>39</span>نتیجه‌گیری</a></li><li data-title="۴۰. منابع و چارچوب‌های مرجع پیشنهادی"><a class="toc-main-link" href="#section-40"><span>40</span>منابع و چارچوب‌های مرجع پیشنهادی</a></li></ol></nav>
+      <div class="sidebar-footer"><span>۴۰ فصل</span><span>نسخه وب</span></div>
+    </aside>
+    <button class="backdrop" id="backdrop" type="button" aria-label="بستن فهرست"></button>
+
+    <main class="main-content">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">پروپوزال پژوهشی، کاربردی و توسعه‌ای</p>
+          <h1 id="page-title">پروپوزال طراحی و پیاده‌سازی سامانه یکپارچه هوشمند مدیریت انبار، دارایی‌های فیزیکی و آمادگی لجستیکی</h1>
+          <p class="hero-subtitle">با استفاده از سیستم پشتیبان تصمیم‌گیری، مدل‌های زبانی بزرگ، بازیابی تقویت‌شده، گراف دانش و دوقلوی دیجیتال</p>
+          <div class="hero-tags"><span>DSS</span><span>LLM</span><span>RAG</span><span>Knowledge Graph</span><span>Digital Twin</span></div>
+          <div class="hero-meta"><span>پیشنهاددهنده: مصطفی صادقی</span><span>نمونه اولیه: ۹ تا ۱۲ ماه</span></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb orb-a"></div><div class="orb orb-b"></div>
+          <div class="network-card"><span class="network-dot d1"></span><span class="network-dot d2"></span><span class="network-dot d3"></span><span class="network-line l1"></span><span class="network-line l2"></span><span class="network-line l3"></span><strong>IALR-C2</strong><small>Intelligent Logistics</small></div>
+        </div>
+      </section>
+
+      <section class="overview" aria-labelledby="overview-title">
+        <div class="title-row"><div><span class="eyebrow">Project Profile</span><h2 id="overview-title">مشخصات اولیه طرح</h2></div><span class="section-badge">اطلاعات پایه</span></div>
+        <dl class="meta-grid"><div class="meta-card meta-card--wide"><dt>عنوان فارسی طرح</dt><dd>طراحی و پیاده‌سازی سامانه یکپارچه هوشمند مدیریت انبار، چرخه عمر دارایی‌های فیزیکی و آمادگی لجستیکی مبتنی بر DSS، LLM، RAG و گراف دانش در سازمان‌های نظامی</dd></div><div class="meta-card meta-card--wide"><dt>عنوان انگلیسی طرح</dt><dd>Design and Implementation of an Integrated Intelligent Decision Support System for Warehouse Management, Physical Asset Lifecycle Management, and Logistics Readiness Using DSS, LLM, RAG, and Knowledge Graph Technologies in Military Organizations</dd></div><div class="meta-card"><dt>نام کوتاه پیشنهادی سامانه</dt><dd>سامانه هوشمند فرماندهی دارایی و آمادگی لجستیکی</dd></div><div class="meta-card"><dt>نام اختصاری انگلیسی پیشنهادی</dt><dd>IALR-C2<br>Intelligent Asset and Logistics Readiness Command and Control System</dd></div><div class="meta-card"><dt>نوع طرح</dt><dd>پژوهشی، کاربردی و توسعه‌ای</dd></div><div class="meta-card meta-card--wide"><dt>حوزه تخصصی</dt><dd><ul class="feature-list"><li>هوش مصنوعی؛</li><li>مدیریت دارایی‌های فیزیکی؛</li><li>مدیریت انبار و لجستیک؛</li><li>سیستم‌های پشتیبان تصمیم‌گیری؛</li><li>مدیریت دانش سازمانی؛</li><li>امنیت اطلاعات؛</li><li>نگهداری و تعمیرات؛</li><li>تحلیل داده و هوش تجاری.</li></ul></dd></div><div class="meta-card"><dt>سازمان سفارش‌دهنده</dt><dd>ارتش جمهوری اسلامی ایران</dd></div><div class="meta-card"><dt>مجری یا پیشنهاددهنده</dt><dd>مصطفی صادقی</dd></div><div class="meta-card"><dt>مدت پیشنهادی اجرای نمونه اولیه</dt><dd>بین ۹ تا ۱۲ ماه</dd></div><div class="meta-card"><dt>محل اجرای پایلوت</dt><dd><span class="muted">تعیین نشده</span></dd></div></dl>
+      </section>
+
+      <div class="document-content"><section class="document-section" id="section-1" data-section="1">
+<header class="section-header">
+  <span class="section-number">01</span>
+  <div><p class="section-kicker">فصل ۱</p><h2>چکیده<a class="anchor" href="#section-1" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>سازمان‌های نظامی برای انجام مأموریت‌های خود به مجموعه گسترده‌ای از دارایی‌های فیزیکی وابسته‌اند. خودروهای سبک و سنگین، ماشین‌آلات، تجهیزات ارتباطی، ابزارآلات، قطعات یدکی، تجهیزات انفرادی، اقلام مصرفی، تجهیزات حساس، سلاح‌های سازمانی، مهمات و سایر اقلام موجود در انبارها، بخش مهمی از سرمایه‌های مادی این سازمان‌ها را تشکیل می‌دهند. مدیریت دقیق این دارایی‌ها فقط به ثبت تعداد اقلام موجود در انبار محدود نیست، بلکه مستلزم شناخت محل، وضعیت، مالکیت، مسئولیت، میزان آمادگی، سابقه بهره‌برداری، سوابق تعمیر و نگهداری، تاریخ بازرسی، وضعیت تحویل و تحول و چرخه کامل عمر هر دارایی است.</p>
+<p>در بسیاری از سازمان‌های بزرگ، اطلاعات دارایی‌ها در سامانه‌های جداگانه، فایل‌های پراکنده، دفاتر انبار، فرم‌های کاغذی، گزارش‌های تعمیراتی، بخش‌نامه‌ها و دانش تجربی کارکنان نگهداری می‌شوند. نبود یک تصویر یکپارچه از وضعیت دارایی‌ها می‌تواند موجب افزایش زمان جست‌وجوی اطلاعات، ایجاد مغایرت میان موجودی واقعی و ثبت‌شده، دشوارشدن ردیابی مسئولیت، تأخیر در تأمین اقلام، افزایش موجودی راکد، فراموش‌شدن سرویس‌های دوره‌ای و کاهش کیفیت تصمیم‌گیری مدیریتی شود.</p>
+<p>طرح حاضر پیشنهاد می‌کند یک سامانه یکپارچه و هوشمند برای مدیریت انبار، دارایی‌های فیزیکی و آمادگی لجستیکی طراحی و پیاده‌سازی شود. سامانه پیشنهادی از ترکیب پایگاه داده تراکنشی، سیستم پشتیبان تصمیم‌گیری یا DSS، مدل‌های زبانی بزرگ یا LLM، معماری بازیابی تقویت‌شده یا RAG، گراف دانش، شناسنامه دیجیتال دارایی و داشبوردهای مدیریتی استفاده خواهد کرد.</p>
+<p>در این معماری، اطلاعات عددی و قطعی مانند تعداد، محل، وضعیت، تاریخ تحویل و مسئول دارایی از پایگاه داده دریافت می‌شود. موتور DSS وظیفه محاسبه شاخص‌ها، اولویت‌بندی درخواست‌ها، تحلیل سناریوها و ارائه پیشنهادهای تصمیم را بر عهده دارد. سامانه RAG اسناد، آیین‌نامه‌ها، دستورالعمل‌ها و سوابق مرتبط را بازیابی می‌کند و مدل زبانی، نتایج را به زبان طبیعی برای کاربر توضیح می‌دهد. مدل زبانی به‌تنهایی مرجع موجودی یا تصمیم‌گیرنده نهایی نخواهد بود و تمام تصمیم‌های مهم باید توسط مسئول انسانی دارای اختیار تأیید شوند.</p>
+<p>یکی از نوآوری‌های اصلی طرح، ایجاد یک شناسنامه دیجیتال برای هر دارایی است. این شناسنامه تمام رویدادهای چرخه عمر دارایی، از ورود و انبارش تا تحویل، بهره‌برداری، بازرسی، تعمیر، انتقال، بازگشت و خروج از رده را ثبت می‌کند. همچنین برای دارایی‌های مهم، یک دوقلوی دیجیتال سبک ایجاد می‌شود که وضعیت فعلی، سوابق، هزینه نگهداری، میزان آمادگی و نیازهای آتی آن را نشان می‌دهد.</p>
+<p>سامانه پیشنهادی قرار نیست جایگزین مدیر، انباردار، کارشناس فنی یا بازرس شود. هدف آن فراهم‌کردن اطلاعات دقیق، مستند، قابل‌توضیح و قابل‌ممیزی برای پشتیبانی از تصمیم انسان است. انتظار می‌رود اجرای این طرح موجب افزایش دقت موجودی، بهبود ردیابی دارایی‌ها، کاهش زمان گزارش‌گیری، شناسایی سریع‌تر مغایرت‌ها، کاهش موجودی راکد، بهبود برنامه‌ریزی نگهداری و افزایش شفافیت در زنجیره تحویل و تحول شود.</p></div>
+</section><section class="document-section" id="section-2" data-section="2">
+<header class="section-header">
+  <span class="section-number">02</span>
+  <div><p class="section-kicker">فصل ۲</p><h2>کلیدواژه‌ها<a class="anchor" href="#section-2" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>سیستم پشتیبان تصمیم‌گیری، مدل زبانی بزرگ، بازیابی تقویت‌شده، مدیریت انبار، مدیریت دارایی‌های فیزیکی، گراف دانش، دوقلوی دیجیتال، نگهداری و تعمیرات، آمادگی لجستیکی، زنجیره تحویل، ردیابی دارایی، هوش مصنوعی قابل‌توضیح، مدیریت دانش، امنیت اطلاعات و کنترل دسترسی.</p></div>
+</section><section class="document-section" id="section-3" data-section="3">
+<header class="section-header">
+  <span class="section-number">03</span>
+  <div><p class="section-kicker">فصل ۳</p><h2>مقدمه<a class="anchor" href="#section-3" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>دارایی‌های فیزیکی یکی از مهم‌ترین پایه‌های توان اجرایی هر سازمان محسوب می‌شوند. در یک سازمان نظامی، وضعیت دارایی‌ها مستقیماً با آمادگی، استمرار فعالیت، امکان پشتیبانی از واحدها و استفاده بهینه از منابع ارتباط دارد. وجود یک دارایی در فهرست موجودی، به‌تنهایی به معنای آماده‌بودن آن نیست. ممکن است یک خودرو در فهرست موجود باشد، اما به علت نقص فنی، نبود قطعه، پایان اعتبار بازرسی یا توقف طولانی، قابلیت استفاده نداشته باشد. ممکن است یک ابزار در سامانه ثبت شده باشد، اما محل فعلی یا شخص تحویل‌گیرنده آن مشخص نباشد. همچنین ممکن است تعداد مناسبی از یک قطعه در کل سازمان وجود داشته باشد، اما توزیع نامناسب آن میان انبارها باعث کمبود در یک واحد و مازاد در واحد دیگر شده باشد.</p>
+<p>در رویکردهای سنتی، مدیریت انبار معمولاً حول ثبت ورود و خروج کالا شکل می‌گیرد. این رویکرد برای پاسخ‌گویی به نیازهای پیچیده مدیریت دارایی کافی نیست؛ زیرا مدیران علاوه بر دانستن تعداد موجودی، باید بتوانند به پرسش‌های دیگری نیز پاسخ دهند:</p>
+<ul class="feature-list"><li>دارایی دقیقاً در چه محلی قرار دارد؟</li><li>در اختیار چه شخص یا واحدی است؟</li><li>وضعیت فنی آن چیست؟</li><li>آخرین بازرسی یا تعمیر آن چه زمانی انجام شده است؟</li><li>آیا سند یا دستورالعمل مربوط به آن هنوز معتبر است؟</li><li>هزینه نگهداری آن در ماه‌ها یا سال‌های گذشته چقدر بوده است؟</li><li>آیا ادامه تعمیر آن منطقی است یا باید برای جایگزینی آن برنامه‌ریزی شود؟</li><li>آیا افزایش مصرف یک قلم، طبیعی است یا نیازمند بررسی بیشتر است؟</li><li>کدام دارایی‌ها باید در هفته یا ماه آینده شمارش، بازرسی یا سرویس شوند؟</li><li>کدام تصمیم، با توجه به بودجه، زمان، موجودی و سطح اهمیت دارایی، مناسب‌تر است؟</li></ul>
+<p>پاسخ‌گویی به این پرسش‌ها نیازمند تلفیق داده‌های عددی، اسناد متنی، سوابق تاریخی، قواعد سازمانی و دانش کارشناسان است. به همین دلیل، سامانه پیشنهادی باید فراتر از یک نرم‌افزار ثبت موجودی باشد و به‌عنوان یک بستر یکپارچه مدیریت دارایی، مدیریت دانش و پشتیبانی تصمیم طراحی شود.</p>
+<p>خانواده استاندارد ISO 55000، مدیریت دارایی را یک فعالیت نظام‌مند برای تحقق ارزش از دارایی‌ها در سراسر چرخه عمر آن‌ها معرفی می‌کند. نسخه ISO 55000:2024 بر هم‌راستایی اهداف مدیریت دارایی با اهداف سازمان، مدیریت چرخه عمر، مدیریت ریسک و بهبود مستمر تأکید دارد. این رویکرد مبنای مناسبی برای تبدیل انبارداری سنتی به مدیریت یکپارچه دارایی فراهم می‌کند.</p></div>
+</section><section class="document-section" id="section-4" data-section="4">
+<header class="section-header">
+  <span class="section-number">04</span>
+  <div><p class="section-kicker">فصل ۴</p><h2>بیان مسئله<a class="anchor" href="#section-4" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-4-1" class="subsection-title"><span>۴-۱</span>پراکندگی اطلاعات<a class="anchor" href="#section-4-1" aria-label="پیوند مستقیم">#</a></h3>
+<p>اطلاعات مربوط به دارایی‌ها معمولاً در منابع مختلفی ذخیره می‌شوند. بخشی از اطلاعات در نرم‌افزار انبار، بخشی در سامانه مالی، بخشی در دفتر فنی، بخشی در فرم‌های تحویل و تحول و بخش دیگری در اسناد تعمیرات قرار دارند. علاوه بر این، مقدار قابل‌توجهی از دانش سازمانی در ذهن کارکنان باتجربه باقی می‌ماند.</p>
+<p>پراکندگی اطلاعات باعث می‌شود دستیابی به یک پاسخ کامل، مستلزم مراجعه به چند واحد و چند سامانه باشد. در نتیجه، زمان تهیه گزارش افزایش می‌یابد و احتمال استفاده از اطلاعات ناقص یا قدیمی بیشتر می‌شود.</p>
+<h3 id="section-4-2" class="subsection-title"><span>۴-۲</span>محدودبودن مدیریت به ثبت موجودی<a class="anchor" href="#section-4-2" aria-label="پیوند مستقیم">#</a></h3>
+<p>سامانه‌های سنتی عمدتاً می‌توانند تعداد ورود، خروج و موجودی جاری را ثبت کنند. این سامانه‌ها معمولاً تصویری کامل از چرخه عمر دارایی ارائه نمی‌دهند. برای مثال، ممکن است مشخص نباشد یک تجهیز چند بار تعمیر شده، چه مدت بدون استفاده مانده، چه قطعاتی برای آن مصرف شده، چه شخصی آن را تحویل گرفته و آیا از نظر اقتصادی ادامه نگهداری آن مناسب است یا خیر.</p>
+<h3 id="section-4-3" class="subsection-title"><span>۴-۳</span>مغایرت میان موجودی ثبت‌شده و موجودی فیزیکی<a class="anchor" href="#section-4-3" aria-label="پیوند مستقیم">#</a></h3>
+<p>مغایرت ممکن است در نتیجه خطای ثبت، تأخیر در ورود اطلاعات، جابه‌جایی ثبت‌نشده، تحویل ناقص، اشتباه در شماره سریال یا شمارش نادرست ایجاد شود. هرچه تعداد دارایی‌ها و انبارها بیشتر باشد، شناسایی علت مغایرت دشوارتر خواهد شد.</p>
+<h3 id="section-4-4" class="subsection-title"><span>۴-۴</span>ضعف در ردیابی زنجیره مسئولیت<a class="anchor" href="#section-4-4" aria-label="پیوند مستقیم">#</a></h3>
+<p>برای دارایی‌های سازمانی، به‌ویژه دارایی‌های حساس، باید مشخص باشد که هر قلم در چه زمان، در اختیار چه شخص یا واحدی قرار داشته و چه رویدادهایی برای آن ثبت شده است. نبود یک زنجیره تحویل یکپارچه، فرایند پاسخ‌گویی، بازرسی و ممیزی را دشوار می‌کند.</p>
+<h3 id="section-4-5" class="subsection-title"><span>۴-۵</span>تأخیر در نگهداری و تعمیرات<a class="anchor" href="#section-4-5" aria-label="پیوند مستقیم">#</a></h3>
+<p>در صورت نبود ارتباط میان سامانه انبار، سوابق تعمیرات و برنامه سرویس، ممکن است بازرسی‌ها و سرویس‌های دوره‌ای به‌موقع انجام نشوند. همچنین ممکن است قطعه موردنیاز برای تعمیر، زمانی درخواست شود که دارایی از خدمت خارج شده است.</p>
+<h3 id="section-4-6" class="subsection-title"><span>۴-۶</span>موجودی راکد و توزیع نامتوازن<a class="anchor" href="#section-4-6" aria-label="پیوند مستقیم">#</a></h3>
+<p>ممکن است یک قلم در یک انبار مازاد و در انبار دیگر کمیاب باشد. نبود تحلیل یکپارچه مصرف، سطح موجودی، زمان تأمین و نیاز واحدها، می‌تواند به سفارش‌های غیرضروری یا کمبودهای پیش‌بینی‌نشده منجر شود.</p>
+<h3 id="section-4-7" class="subsection-title"><span>۴-۷</span>دسترسی دشوار به آیین‌نامه‌ها و دستورالعمل‌ها<a class="anchor" href="#section-4-7" aria-label="پیوند مستقیم">#</a></h3>
+<p>کاربران برای انجام صحیح فرایندهایی مانند تحویل، نگهداری، بازرسی، تعمیر یا خروج از رده باید به دستورالعمل‌های معتبر دسترسی داشته باشند. جست‌وجوی دستی در اسناد متعدد زمان‌بر است و احتمال استفاده از نسخه منسوخ‌شده یک سند وجود دارد.</p>
+<h3 id="section-4-8" class="subsection-title"><span>۴-۸</span>محدودیت سامانه‌های هوش مصنوعی عمومی<a class="anchor" href="#section-4-8" aria-label="پیوند مستقیم">#</a></h3>
+<p>مدل‌های زبانی بزرگ توانایی مناسبی در درک زبان طبیعی و خلاصه‌سازی دارند، اما ممکن است در صورت نبود منبع معتبر، پاسخ نادرست یا ساخته‌شده تولید کنند. همچنین استفاده از خدمات عمومی برای داده‌های سازمانی حساس مناسب نیست.</p>
+<p>بنابراین، مدل زبانی نباید به‌صورت مستقل مرجع تصمیم یا موجودی باشد. لازم است پاسخ آن بر اساس داده‌های واقعی، اسناد مجاز و قواعد سازمانی تولید شود و نتیجه نیز قابلیت بررسی و ممیزی داشته باشد.</p>
+<h3 id="section-4-9" class="subsection-title"><span>۴-۹</span>صورت مسئله اصلی<a class="anchor" href="#section-4-9" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">مسئله اصلی این طرح عبارت است از:</p>
+<p>چگونه می‌توان یک سامانه یکپارچه، امن، مستند و قابل‌توضیح طراحی کرد که با ترکیب پایگاه داده دارایی‌ها، DSS، مدل‌های زبانی بزرگ، RAG، گراف دانش و شناسنامه دیجیتال، مدیریت انبار، ردیابی چرخه عمر دارایی‌ها و تصمیم‌گیری لجستیکی را در سازمان‌های نظامی بهبود دهد؟</p></div>
+</section><section class="document-section" id="section-5" data-section="5">
+<header class="section-header">
+  <span class="section-number">05</span>
+  <div><p class="section-kicker">فصل ۵</p><h2>ضرورت و اهمیت اجرای طرح<a class="anchor" href="#section-5" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-5-1" class="subsection-title"><span>۵-۱</span>حفظ ارزش سرمایه‌های فیزیکی<a class="anchor" href="#section-5-1" aria-label="پیوند مستقیم">#</a></h3>
+<p>دارایی‌های فیزیکی معمولاً با صرف بودجه، زمان و فرایندهای تأمین متعدد تهیه می‌شوند. نبود مدیریت چرخه عمر می‌تواند موجب کاهش عمر مفید، افزایش خرابی، مصرف غیربهینه قطعات و تحمیل هزینه‌های غیرضروری شود.</p>
+<h3 id="section-5-2" class="subsection-title"><span>۵-۲</span>افزایش آمادگی سازمانی<a class="anchor" href="#section-5-2" aria-label="پیوند مستقیم">#</a></h3>
+<p>آمادگی واقعی زمانی مشخص می‌شود که وضعیت فنی، دسترس‌پذیری، اعتبار بازرسی، موجودبودن قطعات و قابلیت بهره‌برداری دارایی به‌صورت هم‌زمان بررسی شود. سامانه پیشنهادی می‌تواند به جای ارائه صرف تعداد موجودی، میزان آمادگی واقعی دارایی‌ها را نشان دهد.</p>
+<h3 id="section-5-3" class="subsection-title"><span>۵-۳</span>بهبود پاسخ‌گویی و ممیزی<a class="anchor" href="#section-5-3" aria-label="پیوند مستقیم">#</a></h3>
+<p>ثبت کامل زنجیره رویدادهای هر دارایی، امکان بازسازی تاریخچه آن را فراهم می‌کند. مدیر یا بازرس می‌تواند مشخص کند چه کسی، در چه تاریخی، چه تغییری روی یک دارایی انجام داده و مبنای آن تغییر چه بوده است.</p>
+<h3 id="section-5-4" class="subsection-title"><span>۵-۴</span>جلوگیری از اتلاف دانش سازمانی<a class="anchor" href="#section-5-4" aria-label="پیوند مستقیم">#</a></h3>
+<p>بخشی از دانش انبارداری، تعمیرات و مدیریت تجهیزات در اختیار کارکنان باتجربه قرار دارد. با ثبت درس‌آموخته‌ها، گزارش‌ها و پاسخ‌های تأییدشده در پایگاه دانش، وابستگی سازمان به حافظه اشخاص کاهش می‌یابد.</p>
+<h3 id="section-5-5" class="subsection-title"><span>۵-۵</span>کاهش زمان تصمیم‌گیری<a class="anchor" href="#section-5-5" aria-label="پیوند مستقیم">#</a></h3>
+<p>سامانه می‌تواند اطلاعات پراکنده را جمع‌آوری و تحلیل کند و پاسخ را به همراه دلایل، منابع و گزینه‌های اقدام در اختیار مدیر قرار دهد. در نتیجه، زمان لازم برای تهیه گزارش و تصمیم‌گیری کاهش می‌یابد.</p>
+<h3 id="section-5-6" class="subsection-title"><span>۵-۶</span>حرکت از مدیریت واکنشی به مدیریت پیش‌نگر<a class="anchor" href="#section-5-6" aria-label="پیوند مستقیم">#</a></h3>
+<p>در مدیریت واکنشی، اقدام پس از وقوع کمبود یا خرابی انجام می‌شود. سامانه پیشنهادی با تحلیل روند مصرف، تاریخ سرویس، عمر دارایی و زمان تأمین، می‌تواند هشدارهای زودهنگام ارائه دهد.</p>
+<h3 id="section-5-7" class="subsection-title"><span>۵-۷</span>افزایش امنیت و کنترل دسترسی<a class="anchor" href="#section-5-7" aria-label="پیوند مستقیم">#</a></h3>
+<p>تجمیع داده‌ها بدون طراحی امنیتی می‌تواند خطرناک باشد. به همین دلیل، سامانه از ابتدا بر اساس تفکیک نقش، حداقل سطح دسترسی، ثبت رویداد و تأیید انسانی طراحی خواهد شد.</p></div>
+</section><section class="document-section" id="section-6" data-section="6">
+<header class="section-header">
+  <span class="section-number">06</span>
+  <div><p class="section-kicker">فصل ۶</p><h2>هدف اصلی طرح<a class="anchor" href="#section-6" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>هدف اصلی، طراحی و پیاده‌سازی یک سامانه یکپارچه هوشمند برای مدیریت انبار، چرخه عمر دارایی‌های فیزیکی، نگهداری و تعمیرات، زنجیره تحویل و آمادگی لجستیکی است؛ به‌گونه‌ای که کاربران مجاز بتوانند به اطلاعات معتبر دسترسی پیدا کنند، گزارش‌های تحلیلی دریافت کنند و تصمیم‌های مدیریتی را بر اساس داده، قواعد و اسناد سازمانی اتخاذ نمایند.</p></div>
+</section><section class="document-section" id="section-7" data-section="7">
+<header class="section-header">
+  <span class="section-number">07</span>
+  <div><p class="section-kicker">فصل ۷</p><h2>اهداف فرعی<a class="anchor" href="#section-7" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><ol class="number-list"><li>ایجاد بانک اطلاعاتی یکپارچه برای ثبت دارایی‌های فیزیکی؛</li><li>ایجاد شناسنامه دیجیتال برای هر دارایی یا گروه دارایی؛</li><li>ثبت و ردیابی تمام رویدادهای چرخه عمر دارایی؛</li><li>مدیریت ورود، خروج، انتقال، تحویل و بازگشت اقلام؛</li><li>ثبت زنجیره مسئولیت و تحویل دارایی‌ها؛</li><li>مدیریت هم‌زمان دارایی‌های سریال‌دار و اقلام تعدادی؛</li><li>مدیریت سوابق بازرسی، سرویس، خرابی و تعمیرات؛</li><li>ایجاد ارتباط میان دارایی‌ها، قطعات، اسناد و واحدهای سازمانی؛</li><li>کاهش مغایرت میان موجودی فیزیکی و سیستمی؛</li><li>شناسایی سریع اقلام راکد، مازاد، کم‌گردش یا زیر نقطه سفارش؛</li><li>پیش‌بینی نیازهای آینده با استفاده از سوابق مصرف؛</li><li>اولویت‌بندی درخواست‌های تأمین، تعمیر و بازرسی؛</li><li>ارائه پرسش‌وپاسخ به زبان طبیعی برای کاربران مجاز؛</li><li>ارائه پاسخ همراه با منبع، تاریخ و میزان اطمینان؛</li><li>شناسایی اسناد منقضی، متناقض یا نامعتبر؛</li><li>ایجاد داشبورد آمادگی دارایی‌ها؛</li><li>ایجاد قابلیت تحلیل سناریوهای «چه می‌شود اگر»؛</li><li>شناسایی الگوهای غیرعادی برای بررسی انسانی؛</li><li>ایجاد قابلیت کار در شبکه داخلی و محیط‌های محدود؛</li><li>فراهم‌کردن زیرساخت لازم برای توسعه آتی RFID، حسگرها و دوقلوی دیجیتال.</li></ol></div>
+</section><section class="document-section" id="section-8" data-section="8">
+<header class="section-header">
+  <span class="section-number">08</span>
+  <div><p class="section-kicker">فصل ۸</p><h2>پرسش‌های پژوهش<a class="anchor" href="#section-8" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-8-1" class="subsection-title"><span>۸-۱</span>پرسش اصلی<a class="anchor" href="#section-8-1" aria-label="پیوند مستقیم">#</a></h3>
+<p>ترکیب DSS، LLM، RAG، گراف دانش و شناسنامه دیجیتال تا چه میزان می‌تواند دقت، سرعت، شفافیت و قابلیت ردیابی در مدیریت انبار و دارایی‌های فیزیکی سازمان‌های نظامی را افزایش دهد؟</p>
+<h3 id="section-8-2" class="subsection-title"><span>۸-۲</span>پرسش‌های فرعی<a class="anchor" href="#section-8-2" aria-label="پیوند مستقیم">#</a></h3>
+<ol class="number-list"><li>آیا سامانه پیشنهادی می‌تواند زمان جست‌وجوی اطلاعات دارایی را کاهش دهد؟</li><li>استفاده از RAG تا چه میزان پاسخ‌های فاقد منبع مدل زبانی را کاهش می‌دهد؟</li><li>آیا ایجاد شناسنامه دیجیتال موجب افزایش قابلیت ردیابی دارایی می‌شود؟</li><li>کدام معیارها برای محاسبه امتیاز آمادگی دارایی مناسب‌تر هستند؟</li><li>آیا موتور DSS می‌تواند درخواست‌های تعمیر، تأمین و بازرسی را به شکل قابل‌قبولی اولویت‌بندی کند؟</li><li>میزان تطابق پیشنهادهای سامانه با نظر کارشناسان خبره چقدر است؟</li><li>آیا گراف دانش موجب بهبود بازیابی روابط میان دارایی‌ها، قطعات، اسناد و واحدها می‌شود؟</li><li>سامانه تا چه میزان قادر به شناسایی موجودی راکد، کمبود احتمالی و توزیع نامتوازن است؟</li><li>چگونه می‌توان اطلاعات حساس را در سطح سند، رکورد و فیلد کنترل کرد؟</li><li>کدام عوامل موجب افزایش یا کاهش اعتماد کاربران به سامانه می‌شوند؟</li><li>آیا نمایش منابع، دلایل و عدم قطعیت موجب افزایش اعتماد کارشناسان می‌شود؟</li><li>سامانه در برابر تزریق پرامپت، سند مخرب و تلاش برای دورزدن مجوزها چه مقاومتی دارد؟</li></ol></div>
+</section><section class="document-section" id="section-9" data-section="9">
+<header class="section-header">
+  <span class="section-number">09</span>
+  <div><p class="section-kicker">فصل ۹</p><h2>فرضیه‌های پژوهش<a class="anchor" href="#section-9" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><ol class="number-list"><li>استفاده از سامانه پیشنهادی، زمان دسترسی به اطلاعات دارایی‌ها را به‌طور معناداری کاهش می‌دهد.</li><li>استفاده از RAG، میزان پاسخ‌های نادرست یا بدون پشتوانه مدل زبانی را کاهش می‌دهد.</li><li>ایجاد شناسنامه دیجیتال، قابلیت ردیابی چرخه عمر دارایی را افزایش می‌دهد.</li><li>استفاده از DSS، ثبات و شفافیت اولویت‌بندی تصمیم‌ها را افزایش می‌دهد.</li><li>ترکیب جست‌وجوی برداری با گراف دانش، دقت بازیابی اطلاعات مرتبط را بهبود می‌دهد.</li><li>نمایش شواهد و دلایل پیشنهاد، اعتماد کاربران به سامانه را افزایش می‌دهد.</li><li>اعمال کنترل دسترسی پیش از مرحله بازیابی، احتمال نمایش اطلاعات غیرمجاز را کاهش می‌دهد.</li><li>تحلیل روند مصرف و زمان تأمین، موجب شناسایی زودهنگام کمبودهای احتمالی می‌شود.</li><li>ثبت زنجیره تحویل و تاریخچه تغییرات، زمان بررسی مغایرت‌ها را کاهش می‌دهد.</li><li>داشبورد آمادگی دارایی‌ها، تصویر دقیق‌تری نسبت به گزارش ساده موجودی ارائه می‌دهد.</li></ol></div>
+</section><section class="document-section" id="section-10" data-section="10">
+<header class="section-header">
+  <span class="section-number">10</span>
+  <div><p class="section-kicker">فصل ۱۰</p><h2>دامنه و محدوده طرح<a class="anchor" href="#section-10" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-10-1" class="subsection-title"><span>۱۰-۱</span>دامنه دارایی‌ها<a class="anchor" href="#section-10-1" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">سامانه می‌تواند گروه‌های زیر را پوشش دهد:</p>
+<h4 class="content-heading">الف) خودروها و ماشین‌آلات</h4>
+<ul class="feature-list"><li>خودروهای سبک و سنگین؛</li><li>ماشین‌آلات مهندسی؛</li><li>تجهیزات حمل‌ونقل؛</li><li>تجهیزات پشتیبانی متحرک؛</li><li>مولدها و ماشین‌آلات ثابت.</li></ul>
+<h4 class="content-heading">ب) تجهیزات فنی و ابزارآلات</h4>
+<ul class="feature-list"><li>ابزارهای مکانیکی و الکتریکی؛</li><li>تجهیزات اندازه‌گیری؛</li><li>تجهیزات مخابراتی؛</li><li>تجهیزات رایانه‌ای؛</li><li>وسایل آزمایشگاهی؛</li><li>تجهیزات تعمیرگاهی.</li></ul>
+<h4 class="content-heading">ج) قطعات یدکی و اقلام مصرفی</h4>
+<ul class="feature-list"><li>قطعات خودرو؛</li><li>قطعات ماشین‌آلات؛</li><li>تجهیزات مصرفی تعمیرگاه؛</li><li>باتری، فیلتر، روغن و اقلام دوره‌ای؛</li><li>تجهیزات دارای تاریخ اعتبار؛</li><li>اقلام قابل جایگزینی.</li></ul>
+<h4 class="content-heading">د) تجهیزات انفرادی و سازمانی</h4>
+<ul class="feature-list"><li>پوشاک و تجهیزات حفاظتی؛</li><li>تجهیزات ارتباطی انفرادی؛</li><li>اقلام تحویلی به کارکنان؛</li><li>تجهیزات اداری و پشتیبانی.</li></ul>
+<h4 class="content-heading">هـ) دارایی‌های حساس</h4>
+<p>این گروه می‌تواند شامل سلاح‌های سازمانی، مهمات و سایر اقلام حساس باشد. تمرکز سامانه در این بخش فقط بر موارد زیر خواهد بود:</p>
+<ul class="feature-list"><li>ثبت شناسه و شماره سریال؛</li><li>کنترل تعداد و موجودی؛</li><li>ثبت محل نگهداری مجاز؛</li><li>زنجیره تحویل و مسئولیت؛</li><li>سوابق شمارش و بازرسی؛</li><li>وضعیت فنی ثبت‌شده؛</li><li>تاریخ اعتبار یا بازرسی؛</li><li>ثبت انتقال، بازگشت یا خروج قانونی؛</li><li>گزارش مغایرت و ممیزی.</li></ul>
+<p>سامانه درباره نحوه استفاده عملیاتی، هدف‌گیری، انتخاب مأموریت یا به‌کارگیری رزمی سلاح و مهمات هیچ پیشنهاد یا تحلیلی ارائه نخواهد کرد.</p>
+<h3 id="section-10-2" class="subsection-title"><span>۱۰-۲</span>دامنه سازمانی نمونه اولیه<a class="anchor" href="#section-10-2" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">نمونه اولیه بهتر است در یک محیط محدود اجرا شود:</p>
+<ul class="feature-list"><li>یک انبار اصلی؛</li><li>یک یا دو انبار فرعی؛</li><li>یک واحد بهره‌بردار؛</li><li>یک مرکز تعمیراتی؛</li><li>مجموعه‌ای محدود از اسناد غیرطبقه‌بندی‌شده؛</li><li>داده‌های واقعی مجاز، ناشناس‌سازی‌شده یا مصنوعی.</li></ul>
+<h3 id="section-10-3" class="subsection-title"><span>۱۰-۳</span>موارد خارج از محدوده نمونه اولیه<a class="anchor" href="#section-10-3" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>کنترل خودکار تجهیزات فیزیکی؛</li><li>صدور خودکار اقلام حساس؛</li><li>تصمیم‌گیری مستقل هوش مصنوعی؛</li><li>اتصال مستقیم به سامانه‌های عملیاتی؛</li><li>استفاده از داده‌های طبقه‌بندی‌شده بدون مجوز؛</li><li>تحلیل کاربرد عملیاتی تسلیحات؛</li><li>اجرای خودکار تصمیم‌های تولیدشده توسط LLM.</li></ul></div>
+</section><section class="document-section" id="section-11" data-section="11">
+<header class="section-header">
+  <span class="section-number">11</span>
+  <div><p class="section-kicker">فصل ۱۱</p><h2>ذی‌نفعان سامانه<a class="anchor" href="#section-11" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-11-1" class="subsection-title"><span>۱۱-۱</span>مسئول انبار<a class="anchor" href="#section-11-1" aria-label="پیوند مستقیم">#</a></h3>
+<p class="eyebrow">وظایف اصلی</p>
+<ul class="feature-list"><li>ثبت ورود و خروج؛</li><li>تحویل و بازگشت؛</li><li>ثبت شمارش فیزیکی؛</li><li>بررسی مغایرت؛</li><li>مشاهده سطح موجودی؛</li><li>دریافت هشدارهای نقطه سفارش.</li></ul>
+<h3 id="section-11-2" class="subsection-title"><span>۱۱-۲</span>مسئول فنی و تعمیرات<a class="anchor" href="#section-11-2" aria-label="پیوند مستقیم">#</a></h3>
+<p class="eyebrow">وظایف اصلی</p>
+<ul class="feature-list"><li>مشاهده سوابق خرابی؛</li><li>ثبت تعمیر و سرویس؛</li><li>بررسی اقلام در انتظار قطعه؛</li><li>دریافت هشدار سرویس دوره‌ای؛</li><li>تحلیل خرابی‌های تکرارشونده.</li></ul>
+<h3 id="section-11-3" class="subsection-title"><span>۱۱-۳</span>مدیر لجستیک<a class="anchor" href="#section-11-3" aria-label="پیوند مستقیم">#</a></h3>
+<p class="eyebrow">وظایف اصلی</p>
+<ul class="feature-list"><li>مشاهده آمادگی کلی دارایی‌ها؛</li><li>بررسی موجودی‌های مازاد و کمبودها؛</li><li>تحلیل هزینه نگهداری؛</li><li>اولویت‌بندی تأمین و تعمیر؛</li><li>بررسی سناریوهای تصمیم.</li></ul>
+<h3 id="section-11-4" class="subsection-title"><span>۱۱-۴</span>بازرس یا حسابرس<a class="anchor" href="#section-11-4" aria-label="پیوند مستقیم">#</a></h3>
+<p class="eyebrow">وظایف اصلی</p>
+<ul class="feature-list"><li>مشاهده تاریخچه تغییرات؛</li><li>بررسی زنجیره تحویل؛</li><li>مشاهده مغایرت‌ها؛</li><li>بررسی دسترسی‌ها و عملیات حساس؛</li><li>تهیه گزارش ممیزی.</li></ul>
+<h3 id="section-11-5" class="subsection-title"><span>۱۱-۵</span>مدیر ارشد<a class="anchor" href="#section-11-5" aria-label="پیوند مستقیم">#</a></h3>
+<p class="eyebrow">وظایف اصلی</p>
+<ul class="feature-list"><li>مشاهده شاخص‌های کلیدی؛</li><li>بررسی ریسک‌های اصلی؛</li><li>مشاهده وضعیت آمادگی؛</li><li>تصویب اقدامات نیازمند مجوز؛</li><li>مقایسه عملکرد واحدها و انبارها.</li></ul>
+<h3 id="section-11-6" class="subsection-title"><span>۱۱-۶</span>مدیر سامانه و مسئول امنیت<a class="anchor" href="#section-11-6" aria-label="پیوند مستقیم">#</a></h3>
+<p class="eyebrow">وظایف اصلی</p>
+<ul class="feature-list"><li>مدیریت کاربران و نقش‌ها؛</li><li>تنظیم سطح دسترسی؛</li><li>نظارت بر رخدادهای امنیتی؛</li><li>مدیریت پشتیبان‌گیری؛</li><li>کنترل مدل‌ها و پایگاه دانش.</li></ul></div>
+</section><section class="document-section" id="section-12" data-section="12">
+<header class="section-header">
+  <span class="section-number">12</span>
+  <div><p class="section-kicker">فصل ۱۲</p><h2>مفهوم شناسنامه دیجیتال دارایی<a class="anchor" href="#section-12" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>برای هر دارایی سریال‌دار، یک پرونده دیجیتال یکتا ایجاد می‌شود. برای اقلام تعدادی نیز شناسنامه در سطح گروه، سری ساخت، بچ یا محموله تعریف خواهد شد.</p>
+<h3 id="section-12-1" class="subsection-title"><span>۱۲-۱</span>اطلاعات هویتی<a class="anchor" href="#section-12-1" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>شناسه یکتا؛</li><li>شماره سریال؛</li><li>کد سازمانی؛</li><li>نام و طبقه دارایی؛</li><li>برند و مدل؛</li><li>تولیدکننده؛</li><li>شماره سری ساخت؛</li><li>سال ساخت؛</li><li>تاریخ ورود به سازمان.</li></ul>
+<h3 id="section-12-2" class="subsection-title"><span>۱۲-۲</span>اطلاعات مالکیت و استقرار<a class="anchor" href="#section-12-2" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>واحد مالک؛</li><li>واحد بهره‌بردار؛</li><li>انبار یا محل فعلی؛</li><li>شخص مسئول؛</li><li>وضعیت تحویل؛</li><li>تاریخ آخرین انتقال؛</li><li>محدوده مجاز نگهداری.</li></ul>
+<h3 id="section-12-3" class="subsection-title"><span>۱۲-۳</span>اطلاعات فنی<a class="anchor" href="#section-12-3" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>وضعیت سلامت؛</li><li>وضعیت عملیاتی؛</li><li>میزان کارکرد؛</li><li>خرابی‌های ثبت‌شده؛</li><li>قطعات تعویض‌شده؛</li><li>تعمیرات انجام‌شده؛</li><li>سرویس‌های دوره‌ای؛</li><li>تاریخ بازرسی بعدی؛</li><li>شرایط خاص نگهداری.</li></ul>
+<h3 id="section-12-4" class="subsection-title"><span>۱۲-۴</span>اطلاعات مالی و اقتصادی<a class="anchor" href="#section-12-4" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>ارزش اولیه؛</li><li>هزینه تجمعی تعمیرات؛</li><li>هزینه نگهداری سالانه؛</li><li>ارزش فعلی تخمینی؛</li><li>هزینه جایگزینی؛</li><li>وضعیت استهلاک.</li></ul>
+<h3 id="section-12-5" class="subsection-title"><span>۱۲-۵</span>سوابق رویدادها<a class="anchor" href="#section-12-5" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>ورود؛</li><li>خروج؛</li><li>تحویل؛</li><li>بازگشت؛</li><li>انتقال؛</li><li>تعمیر؛</li><li>بازرسی؛</li><li>تغییر وضعیت؛</li><li>شمارش؛</li><li>مغایرت؛</li><li>خروج از رده.</li></ul>
+<h3 id="section-12-6" class="subsection-title"><span>۱۲-۶</span>اسناد مرتبط<a class="anchor" href="#section-12-6" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>فاکتور یا سند ورود؛</li><li>دستورالعمل فنی؛</li><li>برگه تعمیرات؛</li><li>فرم تحویل؛</li><li>گزارش بازرسی؛</li><li>تصاویر؛</li><li>گواهی کالیبراسیون؛</li><li>مجوز انتقال یا خروج.</li></ul></div>
+</section><section class="document-section" id="section-13" data-section="13">
+<header class="section-header">
+  <span class="section-number">13</span>
+  <div><p class="section-kicker">فصل ۱۳</p><h2>دوقلوی دیجیتال دارایی<a class="anchor" href="#section-13" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>دوقلوی دیجیتال در این طرح به معنای ایجاد یک نمایش دیجیتال پویا از وضعیت یک دارایی مهم است. این نمایش می‌تواند بدون استفاده اولیه از حسگرهای پیچیده و بر اساس داده‌های ثبت‌شده ساخته شود.</p>
+<p class="lead-label">دوقلوی دیجیتال یک خودرو، برای مثال، شامل موارد زیر خواهد بود:</p>
+<ul class="feature-list"><li>وضعیت فعلی؛</li><li>محل استقرار؛</li><li>میزان کارکرد؛</li><li>آخرین سرویس؛</li><li>سرویس بعدی؛</li><li>سوابق خرابی؛</li><li>هزینه تعمیرات؛</li><li>قطعات پرمصرف؛</li><li>مدت توقف؛</li><li>میزان آمادگی؛</li><li>نیاز احتمالی به تعمیر یا جایگزینی.</li></ul>
+<p>در مراحل توسعه‌یافته‌تر، امکان دریافت داده از حسگرها، RFID یا سامانه‌های پایش نیز وجود خواهد داشت؛ اما اجرای پایلوت به چنین زیرساختی وابسته نخواهد بود.</p></div>
+</section><section class="document-section" id="section-14" data-section="14">
+<header class="section-header">
+  <span class="section-number">14</span>
+  <div><p class="section-kicker">فصل ۱۴</p><h2>شاخص آمادگی دارایی<a class="anchor" href="#section-14" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>یکی از خروجی‌های کلیدی سامانه، محاسبه یک امتیاز برای نمایش وضعیت آمادگی هر دارایی یا گروه دارایی است.</p>
+<h3 id="section-14-1" class="subsection-title"><span>۱۴-۱</span>معیارهای پیشنهادی<a class="anchor" href="#section-14-1" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>وضعیت فنی؛</li><li>اعتبار بازرسی؛</li><li>وضعیت سرویس‌های دوره‌ای؛</li><li>موجودبودن قطعات موردنیاز؛</li><li>مدت توقف؛</li><li>میزان کارکرد؛</li><li>تعداد خرابی‌های تکراری؛</li><li>کامل‌بودن اطلاعات؛</li><li>دسترس‌پذیری دارایی؛</li><li>وضعیت مسئولیت و تحویل؛</li><li>ریسک خرابی؛</li><li>امکان جایگزینی.</li></ul>
+<h3 id="section-14-2" class="subsection-title"><span>۱۴-۲</span>فرمول مفهومی<a class="anchor" href="#section-14-2" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">امتیاز آمادگی هر دارایی از مجموع وزن‌دار معیارها محاسبه می‌شود:</p>
+<div class="formula"><span>فرمول</span><strong>امتیاز آمادگی = مجموع حاصل‌ضرب وزن هر معیار در امتیاز نرمال‌شده آن معیار</strong></div>
+<p>وزن‌ها توسط کارشناسان سازمان و از طریق روش‌هایی مانند AHP، روش دلفی یا جلسات خبرگی تعیین خواهند شد. مدل زبانی حق تغییر مستقل وزن‌ها یا قواعد را نخواهد داشت.</p>
+<h3 id="section-14-3" class="subsection-title"><span>۱۴-۳</span>طبقه‌بندی پیشنهادی<a class="anchor" href="#section-14-3" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>امتیاز ۸۵ تا ۱۰۰: آماده؛</li><li>امتیاز ۷۰ تا ۸۴: آماده با محدودیت؛</li><li>امتیاز ۵۰ تا ۶۹: نیازمند اقدام؛</li><li>امتیاز کمتر از ۵۰: نیازمند بررسی فوری.</li></ul>
+<p class="lead-label">هر امتیاز باید همراه با دلیل ارائه شود. برای مثال:</p>
+<blockquote>«امتیاز آمادگی این خودرو ۶۴ است؛ زیرا سرویس دوره‌ای آن گذشته، دو خرابی تکراری ثبت شده و یک قطعه موردنیاز در انبار موجود نیست.»</blockquote></div>
+</section><section class="document-section" id="section-15" data-section="15">
+<header class="section-header">
+  <span class="section-number">15</span>
+  <div><p class="section-kicker">فصل ۱۵</p><h2>معماری کلان سامانه<a class="anchor" href="#section-15" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>معماری پیشنهادی از چند لایه مستقل اما مرتبط تشکیل می‌شود.</p>
+<h3 id="section-15-1" class="subsection-title"><span>۱۵-۱</span>لایه منابع داده<a class="anchor" href="#section-15-1" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">این لایه شامل موارد زیر است:</p>
+<ul class="feature-list"><li>سامانه موجودی؛</li><li>اطلاعات انبار؛</li><li>سوابق تعمیرات؛</li><li>اطلاعات خودروها و تجهیزات؛</li><li>فرم‌های تحویل و تحول؛</li><li>گزارش‌های بازرسی؛</li><li>اسناد و بخش‌نامه‌ها؛</li><li>اطلاعات کاربران و واحدها؛</li><li>داده‌های بارکد، QR Code و RFID؛</li><li>فایل‌های قدیمی و داده‌های انتقالی.</li></ul>
+<h3 id="section-15-2" class="subsection-title"><span>۱۵-۲</span>لایه جمع‌آوری و یکپارچه‌سازی<a class="anchor" href="#section-15-2" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">در این لایه عملیات زیر انجام می‌شود:</p>
+<ul class="feature-list"><li>دریافت داده از منابع؛</li><li>تبدیل قالب‌ها؛</li><li>حذف داده‌های تکراری؛</li><li>یکسان‌سازی شناسه‌ها؛</li><li>کنترل کیفیت داده؛</li><li>ثبت منبع داده؛</li><li>استخراج فراداده؛</li><li>اعتبارسنجی اطلاعات؛</li><li>اعمال سطح دسترسی.</li></ul>
+<h3 id="section-15-3" class="subsection-title"><span>۱۵-۳</span>پایگاه داده تراکنشی<a class="anchor" href="#section-15-3" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">اطلاعات قطعی و ساخت‌یافته در این پایگاه ذخیره می‌شوند:</p>
+<ul class="feature-list"><li>تعداد؛</li><li>شماره سریال؛</li><li>مکان؛</li><li>وضعیت؛</li><li>تاریخ؛</li><li>مسئول؛</li><li>تراکنش‌های ورود و خروج؛</li><li>سوابق تعمیر؛</li><li>سطح دسترسی.</li></ul>
+<p>این پایگاه، مرجع رسمی اطلاعات عددی سامانه خواهد بود.</p>
+<h3 id="section-15-4" class="subsection-title"><span>۱۵-۴</span>مخزن اسناد<a class="anchor" href="#section-15-4" aria-label="پیوند مستقیم">#</a></h3>
+<p>نسخه‌های معتبر اسناد، آیین‌نامه‌ها، دستورالعمل‌ها و گزارش‌ها در این مخزن نگهداری می‌شوند. برای هر سند، فراداده‌های زیر ثبت خواهد شد:</p>
+<ul class="feature-list"><li>عنوان؛</li><li>شماره؛</li><li>تاریخ؛</li><li>صادرکننده؛</li><li>نسخه؛</li><li>وضعیت اعتبار؛</li><li>سطح دسترسی؛</li><li>اسناد جایگزین‌شده؛</li><li>تاریخ پایان اعتبار.</li></ul>
+<h3 id="section-15-5" class="subsection-title"><span>۱۵-۵</span>پایگاه برداری<a class="anchor" href="#section-15-5" aria-label="پیوند مستقیم">#</a></h3>
+<p>متن اسناد پس از قطعه‌بندی و تولید بردار معنایی در پایگاه برداری ذخیره می‌شود تا جست‌وجوی مفهومی و بازیابی RAG امکان‌پذیر شود.</p>
+<h3 id="section-15-6" class="subsection-title"><span>۱۵-۶</span>گراف دانش<a class="anchor" href="#section-15-6" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">گراف دانش روابط میان موجودیت‌ها را ثبت می‌کند:</p>
+<ul class="feature-list"><li>دارایی متعلق به کدام واحد است؛</li><li>دارایی در اختیار چه شخصی است؛</li><li>دارایی از چه قطعاتی استفاده می‌کند؛</li><li>کدام سند بر آن حاکم است؛</li><li>چه خرابی‌هایی داشته است؛</li><li>در کدام مرکز تعمیر شده است؛</li><li>چه رویدادهایی برای آن ثبت شده است.</li></ul>
+<h3 id="section-15-7" class="subsection-title"><span>۱۵-۷</span>موتور DSS<a class="anchor" href="#section-15-7" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">موتور پشتیبان تصمیم وظایف زیر را بر عهده دارد:</p>
+<ul class="feature-list"><li>امتیازدهی؛</li><li>اولویت‌بندی؛</li><li>پیش‌بینی؛</li><li>تحلیل سناریو؛</li><li>کنترل قواعد؛</li><li>شناسایی کمبود و مازاد؛</li><li>پیشنهاد اقدام؛</li><li>محاسبه شاخص آمادگی.</li></ul>
+<h3 id="section-15-8" class="subsection-title"><span>۱۵-۸</span>موتور RAG<a class="anchor" href="#section-15-8" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">موتور RAG مراحل زیر را انجام می‌دهد:</p>
+<ol class="number-list"><li>دریافت سؤال؛</li><li>شناسایی هویت و نقش کاربر؛</li><li>اعمال فیلتر دسترسی؛</li><li>تحلیل سؤال؛</li><li>بازیابی داده‌های ساخت‌یافته؛</li><li>بازیابی اسناد؛</li><li>بازیابی روابط گرافی؛</li><li>رتبه‌بندی نتایج؛</li><li>ارسال شواهد منتخب به مدل زبانی؛</li><li>تولید پاسخ همراه با استناد.</li></ol>
+<h3 id="section-15-9" class="subsection-title"><span>۱۵-۹</span>مدل زبانی<a class="anchor" href="#section-15-9" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">وظایف مجاز مدل زبانی عبارت‌اند از:</p>
+<ul class="feature-list"><li>فهم سؤال کاربر؛</li><li>تبدیل سؤال به درخواست ساخت‌یافته؛</li><li>خلاصه‌سازی اسناد؛</li><li>توضیح نتایج DSS؛</li><li>مقایسه گزینه‌ها؛</li><li>تولید پیش‌نویس گزارش؛</li><li>بیان محدودیت و عدم قطعیت.</li></ul>
+<p>مدل زبانی مجاز به انجام مستقیم عملیات حساس، تغییر موجودی یا صدور دارایی نیست.</p>
+<h3 id="section-15-10" class="subsection-title"><span>۱۵-۱۰</span>رابط کاربری و داشبورد<a class="anchor" href="#section-15-10" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">داشبوردها بر اساس نقش کاربران طراحی می‌شوند و شامل موارد زیر هستند:</p>
+<ul class="feature-list"><li>جست‌وجوی دارایی؛</li><li>شناسنامه دیجیتال؛</li><li>وضعیت موجودی؛</li><li>وضعیت آمادگی؛</li><li>گزارش مغایرت؛</li><li>اقلام زیر نقطه سفارش؛</li><li>اقلام راکد؛</li><li>سرویس‌های سررسیدشده؛</li><li>پیشنهادهای DSS؛</li><li>پرسش‌وپاسخ هوشمند؛</li><li>گزارش ممیزی.</li></ul></div>
+</section><section class="document-section" id="section-16" data-section="16">
+<header class="section-header">
+  <span class="section-number">16</span>
+  <div><p class="section-kicker">فصل ۱۶</p><h2>معماری RAG چندلایه<a class="anchor" href="#section-16" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-16-1" class="subsection-title"><span>۱۶-۱</span>Structured RAG<a class="anchor" href="#section-16-1" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">برای پاسخ به پرسش‌های عددی و قطعی استفاده می‌شود:</p>
+<ul class="feature-list"><li>چه تعداد موجود است؟</li><li>دارایی کجاست؟</li><li>در اختیار چه کسی است؟</li><li>آخرین انتقال چه زمانی بوده است؟</li></ul>
+<p>این پاسخ‌ها مستقیماً از پایگاه داده استخراج می‌شوند.</p>
+<h3 id="section-16-2" class="subsection-title"><span>۱۶-۲</span>Document RAG<a class="anchor" href="#section-16-2" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">برای پاسخ به پرسش‌های مبتنی بر اسناد استفاده می‌شود:</p>
+<ul class="feature-list"><li>دستورالعمل نگهداری چیست؟</li><li>مهلت بازگشت چقدر است؟</li><li>کدام فرم باید تکمیل شود؟</li><li>سند معتبر فعلی کدام است؟</li></ul>
+<h3 id="section-16-3" class="subsection-title"><span>۱۶-۳</span>Graph RAG<a class="anchor" href="#section-16-3" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">برای پرسش‌هایی که نیازمند تحلیل رابطه هستند:</p>
+<ul class="feature-list"><li>کدام دارایی‌ها از قطعه خاصی استفاده می‌کنند؟</li><li>خرابی کدام خودروها به یک قطعه یا مرکز تعمیر مشترک مرتبط است؟</li><li>کدام اسناد بر این گروه دارایی حاکم‌اند؟</li></ul>
+<h3 id="section-16-4" class="subsection-title"><span>۱۶-۴</span>Temporal RAG<a class="anchor" href="#section-16-4" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">برای کنترل زمان و اعتبار:</p>
+<ul class="feature-list"><li>وضعیت دارایی در یک تاریخ مشخص چه بوده است؟</li><li>کدام سند در زمان وقوع رویداد معتبر بوده است؟</li><li>آیا اطلاعات بازیابی‌شده جدید هستند؟</li><li>چه سندی جایگزین سند قبلی شده است؟</li></ul></div>
+</section><section class="document-section" id="section-17" data-section="17">
+<header class="section-header">
+  <span class="section-number">17</span>
+  <div><p class="section-kicker">فصل ۱۷</p><h2>گواهی شواهد پاسخ<a class="anchor" href="#section-17" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>هر پاسخ مهم سامانه باید همراه با یک کارت شواهد ارائه شود.</p>
+<p class="lead-label">کارت شواهد شامل موارد زیر است:</p>
+<ul class="feature-list"><li>پاسخ اصلی؛</li><li>منبع داده؛</li><li>اسناد استفاده‌شده؛</li><li>تاریخ آخرین به‌روزرسانی؛</li><li>درجه اطمینان؛</li><li>اطلاعات ناقص؛</li><li>تناقض‌های احتمالی؛</li><li>پیشنهاد بررسی انسانی.</li></ul>
+<p>درجه اطمینان نباید صرفاً توسط مدل زبانی اعلام شود، بلکه بر اساس کیفیت داده، تازگی منبع، تعداد شواهد، تطابق منابع و کامل‌بودن اطلاعات محاسبه می‌شود.</p></div>
+</section><section class="document-section" id="section-18" data-section="18">
+<header class="section-header">
+  <span class="section-number">18</span>
+  <div><p class="section-kicker">فصل ۱۸</p><h2>زیرسامانه‌های پیشنهادی<a class="anchor" href="#section-18" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-18-1" class="subsection-title"><span>۱۸-۱</span>زیرسامانه ثبت و طبقه‌بندی دارایی<a class="anchor" href="#section-18-1" aria-label="پیوند مستقیم">#</a></h3>
+<p>وظیفه این بخش ایجاد شناسه، طبقه‌بندی و ثبت مشخصات اولیه دارایی است.</p>
+<h3 id="section-18-2" class="subsection-title"><span>۱۸-۲</span>زیرسامانه ورود، خروج و انتقال<a class="anchor" href="#section-18-2" aria-label="پیوند مستقیم">#</a></h3>
+<p>تمام تراکنش‌های فیزیکی دارایی را ثبت می‌کند و مانع ایجاد تغییر بدون مجوز می‌شود.</p>
+<h3 id="section-18-3" class="subsection-title"><span>۱۸-۳</span>زیرسامانه تحویل و تحول<a class="anchor" href="#section-18-3" aria-label="پیوند مستقیم">#</a></h3>
+<p>دارایی تحویل‌شده، تحویل‌گیرنده، تاریخ، محل، مجوز و وضعیت بازگشت را ثبت می‌کند.</p>
+<h3 id="section-18-4" class="subsection-title"><span>۱۸-۴</span>زیرسامانه شمارش و مغایرت<a class="anchor" href="#section-18-4" aria-label="پیوند مستقیم">#</a></h3>
+<p>اطلاعات شمارش فیزیکی را با موجودی سامانه مقایسه می‌کند و مغایرت‌ها را بر اساس حساسیت، ارزش و تعداد اولویت‌بندی می‌کند.</p>
+<h3 id="section-18-5" class="subsection-title"><span>۱۸-۵</span>زیرسامانه نگهداری و تعمیرات<a class="anchor" href="#section-18-5" aria-label="پیوند مستقیم">#</a></h3>
+<p>برنامه سرویس، خرابی، تعمیر، قطعات مصرف‌شده، هزینه و زمان توقف را مدیریت می‌کند.</p>
+<h3 id="section-18-6" class="subsection-title"><span>۱۸-۶</span>زیرسامانه مدیریت تاریخ اعتبار<a class="anchor" href="#section-18-6" aria-label="پیوند مستقیم">#</a></h3>
+<p>اقلام دارای تاریخ انقضا، اعتبار بازرسی، کالیبراسیون یا سرویس را کنترل می‌کند.</p>
+<h3 id="section-18-7" class="subsection-title"><span>۱۸-۷</span>زیرسامانه مدیریت موجودی<a class="anchor" href="#section-18-7" aria-label="پیوند مستقیم">#</a></h3>
+<p>نقطه سفارش، حداقل موجودی، حداکثر موجودی، نرخ مصرف و زمان تأمین را مدیریت می‌کند.</p>
+<h3 id="section-18-8" class="subsection-title"><span>۱۸-۸</span>زیرسامانه پیش‌بینی نیاز<a class="anchor" href="#section-18-8" aria-label="پیوند مستقیم">#</a></h3>
+<p>با تحلیل داده‌های گذشته، نیاز احتمالی دوره‌های آینده را تخمین می‌زند.</p>
+<h3 id="section-18-9" class="subsection-title"><span>۱۸-۹</span>زیرسامانه مدیریت دانش<a class="anchor" href="#section-18-9" aria-label="پیوند مستقیم">#</a></h3>
+<p>اسناد و تجربیات را در اختیار کاربران مجاز قرار می‌دهد و پاسخ‌های مستند تولید می‌کند.</p>
+<h3 id="section-18-10" class="subsection-title"><span>۱۸-۱۰</span>زیرسامانه کشف ناهنجاری<a class="anchor" href="#section-18-10" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">موارد غیرعادی را برای بررسی انسانی علامت‌گذاری می‌کند، مانند:</p>
+<ul class="feature-list"><li>تغییرات غیرمعمول موجودی؛</li><li>افزایش ناگهانی مصرف؛</li><li>اصلاحات مکرر؛</li><li>وجود یک شماره سریال در دو محل؛</li><li>تأخیر غیرعادی در بازگشت؛</li><li>هزینه تعمیرات غیرمتعارف؛</li><li>مغایرت‌های تکراری؛</li><li>ثبت عملیات حساس در شرایط غیرمعمول.</li></ul>
+<p>هیچ هشدار خودکاری نباید به‌تنهایی مبنای اتهام یا اقدام انضباطی قرار گیرد.</p>
+<h3 id="section-18-11" class="subsection-title"><span>۱۸-۱۱</span>زیرسامانه تحلیل سناریو<a class="anchor" href="#section-18-11" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">مدیر می‌تواند اثر تصمیم‌های مختلف را بررسی کند:</p>
+<ul class="feature-list"><li>افزایش زمان تأمین؛</li><li>کاهش بودجه؛</li><li>خرابی بخشی از موجودی؛</li><li>انتقال دارایی بین انبارها؛</li><li>تعمیر یا جایگزینی؛</li><li>تغییر نقطه سفارش.</li></ul></div>
+</section><section class="document-section" id="section-19" data-section="19">
+<header class="section-header">
+  <span class="section-number">19</span>
+  <div><p class="section-kicker">فصل ۱۹</p><h2>نمونه سناریوهای استفاده<a class="anchor" href="#section-19" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h4 class="content-heading">سناریوی اول: گزارش آمادگی هفتگی</h4>
+<p class="lead-label">مدیر می‌پرسد:</p>
+<blockquote>«وضعیت آمادگی خودروها چیست و مهم‌ترین اقدامات این هفته کدام‌اند؟»</blockquote>
+<p class="lead-label">سامانه:</p>
+<ol class="number-list"><li>اطلاعات خودروها را دریافت می‌کند؛</li><li>وضعیت فنی، سرویس و قطعات را بررسی می‌کند؛</li><li>امتیاز آمادگی را محاسبه می‌کند؛</li><li>خودروهای نیازمند اقدام را رتبه‌بندی می‌کند؛</li><li>دلایل هر پیشنهاد را نمایش می‌دهد؛</li><li>گزارش مدیریتی تولید می‌کند.</li></ol>
+<h4 class="content-heading">سناریوی دوم: شناسایی کمبود احتمالی</h4>
+<p class="lead-label">کاربر می‌پرسد:</p>
+<blockquote>«کدام قطعات طی دو ماه آینده احتمالاً به زیر حداقل موجودی می‌رسند؟»</blockquote>
+<p class="lead-label">سامانه:</p>
+<ul class="feature-list"><li>نرخ مصرف را تحلیل می‌کند؛</li><li>سفارش‌های باز را بررسی می‌کند؛</li><li>زمان تأمین را در نظر می‌گیرد؛</li><li>سطح اطمینان پیش‌بینی را اعلام می‌کند؛</li><li>پیشنهاد سفارش یا انتقال داخلی ارائه می‌دهد.</li></ul>
+<h4 class="content-heading">سناریوی سوم: تحلیل مغایرت</h4>
+<p class="lead-label">کاربر می‌پرسد:</p>
+<blockquote>«مغایرت‌های شمارش اخیر از کجا ایجاد شده‌اند؟»</blockquote>
+<p class="lead-label">سامانه:</p>
+<ul class="feature-list"><li>شمارش فیزیکی و سیستمی را مقایسه می‌کند؛</li><li>زنجیره تحویل را بررسی می‌کند؛</li><li>انتقال‌های ناقص را شناسایی می‌کند؛</li><li>موارد نیازمند بررسی انسانی را رتبه‌بندی می‌کند.</li></ul>
+<h4 class="content-heading">سناریوی چهارم: تعمیر یا جایگزینی</h4>
+<p class="lead-label">مدیر می‌پرسد:</p>
+<blockquote>«آیا ادامه تعمیر خودروی مشخص‌شده به‌صرفه است؟»</blockquote>
+<p class="lead-label">DSS موارد زیر را مقایسه می‌کند:</p>
+<ul class="feature-list"><li>هزینه تعمیر؛</li><li>عمر دارایی؛</li><li>تعداد خرابی؛</li><li>مدت توقف؛</li><li>قیمت جایگزینی؛</li><li>اهمیت دارایی؛</li><li>موجودبودن قطعات.</li></ul>
+<p>سامانه چند گزینه ارائه می‌دهد، اما تصمیم نهایی با مدیر خواهد بود.</p>
+<h4 class="content-heading">سناریوی پنجم: بازیابی دستورالعمل معتبر</h4>
+<p class="lead-label">کاربر می‌پرسد:</p>
+<blockquote>«بر اساس آخرین دستورالعمل معتبر، روند تحویل و بازگشت این نوع تجهیز چگونه است؟»</blockquote>
+<p class="lead-label">سامانه:</p>
+<ul class="feature-list"><li>اسناد مجاز را جست‌وجو می‌کند؛</li><li>آخرین نسخه معتبر را شناسایی می‌کند؛</li><li>بندهای مرتبط را بازیابی می‌کند؛</li><li>پاسخ را همراه با شماره سند و تاریخ ارائه می‌دهد.</li></ul>
+<h4 class="content-heading">سناریوی ششم: دارایی‌های حساس</h4>
+<p class="lead-label">کاربر دارای مجوز می‌پرسد:</p>
+<blockquote>«کدام دارایی‌های حساس باید مجدداً شمارش یا بازرسی شوند؟»</blockquote>
+<p>سامانه بر اساس تاریخ آخرین شمارش، مغایرت‌های گذشته، وضعیت تحویل، سطح حساسیت و ناقص‌بودن سوابق، یک فهرست اولویت‌بندی‌شده برای بازرسی انسانی تهیه می‌کند.</p></div>
+</section><section class="document-section" id="section-20" data-section="20">
+<header class="section-header">
+  <span class="section-number">20</span>
+  <div><p class="section-kicker">فصل ۲۰</p><h2>روش تحقیق و اجرای پروژه<a class="anchor" href="#section-20" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>روش پیشنهادی، ترکیبی از پژوهش کاربردی و روش علم طراحی است.</p>
+<h4 class="content-heading">مرحله اول: شناخت وضعیت موجود</h4>
+<p class="lead-label">فعالیت‌ها:</p>
+<ul class="feature-list"><li>بررسی فرایندهای انبار؛</li><li>مصاحبه با کاربران؛</li><li>مشاهده گردش کار؛</li><li>بررسی فرم‌ها و اسناد؛</li><li>شناسایی مشکلات؛</li><li>تهیه نقشه وضع موجود.</li></ul>
+<h4 class="content-heading">مرحله دوم: نیازسنجی</h4>
+<p class="lead-label">نیازها در گروه‌های زیر طبقه‌بندی می‌شوند:</p>
+<ul class="feature-list"><li>نیازهای عملیاتی؛</li><li>نیازهای اطلاعاتی؛</li><li>نیازهای مدیریتی؛</li><li>نیازهای امنیتی؛</li><li>نیازهای فنی؛</li><li>نیازهای ممیزی؛</li><li>نیازهای هوش مصنوعی.</li></ul>
+<h4 class="content-heading">مرحله سوم: طراحی مدل داده و آنتولوژی</h4>
+<p class="lead-label">موجودیت‌های اصلی تعریف می‌شوند:</p>
+<ul class="feature-list"><li>دارایی؛</li><li>انبار؛</li><li>محل؛</li><li>شخص؛</li><li>واحد؛</li><li>قطعه؛</li><li>تراکنش؛</li><li>تعمیر؛</li><li>سند؛</li><li>بازرسی؛</li><li>رویداد.</li></ul>
+<p>روابط میان این موجودیت‌ها نیز مشخص خواهد شد.</p>
+<h4 class="content-heading">مرحله چهارم: آماده‌سازی داده</h4>
+<ul class="feature-list"><li>پاک‌سازی داده؛</li><li>حذف تکرار؛</li><li>اصلاح شناسه‌ها؛</li><li>تکمیل فراداده؛</li><li>ناشناس‌سازی؛</li><li>تعیین سطح دسترسی؛</li><li>ارزیابی کیفیت.</li></ul>
+<h4 class="content-heading">مرحله پنجم: طراحی و توسعه نمونه اولیه</h4>
+<p class="lead-label">نمونه اولیه شامل موارد زیر خواهد بود:</p>
+<ul class="feature-list"><li>بانک اطلاعات دارایی؛</li><li>شناسنامه دیجیتال؛</li><li>ثبت ورود و خروج؛</li><li>QR Code؛</li><li>زنجیره تحویل؛</li><li>داشبورد؛</li><li>موتور RAG؛</li><li>پرسش‌وپاسخ مستند؛</li><li>موتور DSS اولیه.</li></ul>
+<h4 class="content-heading">مرحله ششم: آزمایش محدود</h4>
+<p>سامانه با داده‌های مجاز و در یک محیط کنترل‌شده آزمایش می‌شود.</p>
+<h4 class="content-heading">مرحله هفتم: ارزیابی</h4>
+<p>نتایج سامانه با روش سنتی و نظر کارشناسان مقایسه خواهد شد.</p>
+<h4 class="content-heading">مرحله هشتم: اصلاح و تکمیل</h4>
+<p>مشکلات شناسایی‌شده برطرف و نسخه پایلوت آماده می‌شود.</p></div>
+</section><section class="document-section" id="section-21" data-section="21">
+<header class="section-header">
+  <span class="section-number">21</span>
+  <div><p class="section-kicker">فصل ۲۱</p><h2>فناوری‌های پیشنهادی<a class="anchor" href="#section-21" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>انتخاب نهایی فناوری باید بر اساس سیاست‌های سازمان، زیرساخت و محدودیت‌های امنیتی انجام شود. گزینه‌های اولیه عبارت‌اند از:</p>
+<h4 class="content-heading">بخش نرم‌افزار</h4>
+<ul class="feature-list"><li>Python برای توسعه موتورهای تحلیلی؛</li><li>FastAPI برای خدمات نرم‌افزاری؛</li><li>PostgreSQL برای داده‌های ساخت‌یافته؛</li><li>پایگاه برداری داخلی برای RAG؛</li><li>پایگاه گراف برای روابط دانش؛</li><li>React یا یک چارچوب مشابه برای رابط کاربری؛</li><li>Docker برای بسته‌بندی و استقرار کنترل‌شده.</li></ul>
+<h4 class="content-heading">بخش هوش مصنوعی</h4>
+<ul class="feature-list"><li>مدل زبانی قابل‌استقرار داخلی؛</li><li>مدل تعبیه‌سازی مناسب زبان فارسی؛</li><li>موتور بازرتبه‌بندی اسناد؛</li><li>مدل‌های پیش‌بینی سری زمانی؛</li><li>الگوریتم‌های کشف ناهنجاری؛</li><li>موتور قواعد تصمیم.</li></ul>
+<h4 class="content-heading">بخش شناسایی</h4>
+<ul class="feature-list"><li>QR Code در فاز اول؛</li><li>بارکد برای اقلام عادی؛</li><li>RFID در فاز توسعه؛</li><li>امکان ثبت آفلاین برای عملیات شمارش.</li></ul>
+<p>استاندارد جهانی ردیابی GS1 بر اصول «شناسایی، ثبت و اشتراک‌گذاری» استوار است و استفاده از بارکد، QR و EPC/RFID را برای شناسایی دارایی‌ها، واحدهای لجستیکی، مکان‌ها و رویدادهای ردیابی پوشش می‌دهد. استفاده از این اصول می‌تواند قابلیت توسعه و یکپارچه‌سازی سامانه را افزایش دهد.</p></div>
+</section><section class="document-section" id="section-22" data-section="22">
+<header class="section-header">
+  <span class="section-number">22</span>
+  <div><p class="section-kicker">فصل ۲۲</p><h2>الزامات امنیتی<a class="anchor" href="#section-22" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-22-1" class="subsection-title"><span>۲۲-۱</span>استقرار داخلی<a class="anchor" href="#section-22-1" aria-label="پیوند مستقیم">#</a></h3>
+<p>سامانه باید در شبکه داخلی یا زیرساخت مورد تأیید سازمان مستقر شود. داده‌های سازمانی نباید بدون مجوز به سرویس‌های عمومی ارسال شوند.</p>
+<h3 id="section-22-2" class="subsection-title"><span>۲۲-۲</span>کنترل دسترسی<a class="anchor" href="#section-22-2" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">کنترل دسترسی بر اساس موارد زیر انجام می‌شود:</p>
+<ul class="feature-list"><li>نقش کاربر؛</li><li>واحد سازمانی؛</li><li>محل خدمت؛</li><li>نوع دارایی؛</li><li>سطح حساسیت؛</li><li>هدف دسترسی؛</li><li>زمان و شرایط دسترسی.</li></ul>
+<h3 id="section-22-3" class="subsection-title"><span>۲۲-۳</span>اعمال مجوز قبل از بازیابی<a class="anchor" href="#section-22-3" aria-label="پیوند مستقیم">#</a></h3>
+<p>فیلتر امنیتی باید پیش از جست‌وجوی RAG اعمال شود. مدل زبانی نباید ابتدا سند را دریافت کند و سپس تصمیم بگیرد که آن را نمایش دهد یا خیر.</p>
+<h3 id="section-22-4" class="subsection-title"><span>۲۲-۴</span>ثبت رویداد<a class="anchor" href="#section-22-4" aria-label="پیوند مستقیم">#</a></h3>
+<p class="lead-label">رویدادهای زیر ثبت می‌شوند:</p>
+<ul class="feature-list"><li>ورود کاربران؛</li><li>جست‌وجوها؛</li><li>مشاهده سوابق حساس؛</li><li>تغییر اطلاعات؛</li><li>تحویل و انتقال؛</li><li>تأیید یا رد پیشنهاد؛</li><li>تلاش‌های ناموفق دسترسی؛</li><li>عملیات مدیریتی.</li></ul>
+<h3 id="section-22-5" class="subsection-title"><span>۲۲-۵</span>تأیید انسانی<a class="anchor" href="#section-22-5" aria-label="پیوند مستقیم">#</a></h3>
+<p>عملیات مهم مانند تحویل دارایی حساس، اصلاح موجودی، انتقال بین واحدها یا خروج از رده باید به تأیید مسئول مجاز برسد.</p>
+<h3 id="section-22-6" class="subsection-title"><span>۲۲-۶</span>امنیت مدل زبانی<a class="anchor" href="#section-22-6" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>محدودسازی ابزارهای در دسترس مدل؛</li><li>جلوگیری از اجرای مستقیم دستورات؛</li><li>مقابله با Prompt Injection؛</li><li>اسکن اسناد ورودی؛</li><li>جلوگیری از افشای دستورهای سیستمی؛</li><li>محدودکردن حافظه گفتگو؛</li><li>ثبت پاسخ‌ها برای ممیزی؛</li><li>آزمون امنیتی دوره‌ای.</li></ul>
+<h3 id="section-22-7" class="subsection-title"><span>۲۲-۷</span>معماری Zero Trust<a class="anchor" href="#section-22-7" aria-label="پیوند مستقیم">#</a></h3>
+<p>در این معماری، صرف حضور کاربر یا دستگاه در شبکه داخلی به معنای اعتماد کامل نیست و هر درخواست باید با توجه به هویت، نقش، دستگاه و منابع موردنظر ارزیابی شود. مدل بلوغ Zero Trust سازمان CISA نیز کنترل هویت، دستگاه، شبکه، برنامه و داده را در کنار قابلیت‌های مشاهده‌پذیری و تحلیل مورد توجه قرار می‌دهد.</p></div>
+</section><section class="document-section" id="section-23" data-section="23">
+<header class="section-header">
+  <span class="section-number">23</span>
+  <div><p class="section-kicker">فصل ۲۳</p><h2>مدیریت ریسک هوش مصنوعی<a class="anchor" href="#section-23" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>سامانه باید در تمام چرخه طراحی، توسعه، استفاده و ارزیابی تحت مدیریت ریسک قرار گیرد.</p>
+<h4 class="content-heading">ریسک‌های اصلی</h4>
+<ul class="feature-list"><li>تولید پاسخ نادرست؛</li><li>استناد اشتباه؛</li><li>اعتماد بیش از حد کاربر؛</li><li>نشت اطلاعات؛</li><li>سوگیری داده؛</li><li>استفاده از سند منسوخ؛</li><li>تفسیر نادرست سؤال؛</li><li>دسترسی خارج از مجوز؛</li><li>تغییر رفتار مدل پس از به‌روزرسانی؛</li><li>حمله از طریق اسناد مخرب.</li></ul>
+<h4 class="content-heading">اقدامات کنترلی</h4>
+<ul class="feature-list"><li>پاسخ مبتنی بر شواهد؛</li><li>نمایش منابع؛</li><li>حالت عدم پاسخ؛</li><li>تأیید انسانی؛</li><li>مجموعه آزمون ثابت؛</li><li>مدیریت نسخه مدل؛</li><li>ثبت ورودی و خروجی؛</li><li>ارزیابی دوره‌ای؛</li><li>آزمون تیم قرمز؛</li><li>محدودسازی دامنه پاسخ.</li></ul>
+<p>چارچوب NIST AI RMF برای واردکردن ملاحظات اعتمادپذیری در طراحی، توسعه، استفاده و ارزیابی سامانه‌های هوش مصنوعی ارائه شده است. نمایه هوش مصنوعی مولد NIST نیز ریسک‌های خاص سامانه‌های مولد و اقدامات پیشنهادی برای مدیریت آن‌ها را پوشش می‌دهد. این دو منبع می‌توانند مبنای فرایند مدیریت ریسک پروژه قرار گیرند.</p></div>
+</section><section class="document-section" id="section-24" data-section="24">
+<header class="section-header">
+  <span class="section-number">24</span>
+  <div><p class="section-kicker">فصل ۲۴</p><h2>معیارهای ارزیابی<a class="anchor" href="#section-24" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-24-1" class="subsection-title"><span>۲۴-۱</span>معیارهای انبارداری<a class="anchor" href="#section-24-1" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>درصد تطابق موجودی فیزیکی و سیستمی؛</li><li>زمان انجام شمارش؛</li><li>تعداد مغایرت‌ها؛</li><li>زمان رفع مغایرت؛</li><li>نرخ موجودی راکد؛</li><li>نرخ کمبود موجودی؛</li><li>تعداد اقلام بدون شناسه؛</li><li>درصد تراکنش‌های کامل؛</li><li>زمان تهیه گزارش.</li></ul>
+<h3 id="section-24-2" class="subsection-title"><span>۲۴-۲</span>معیارهای مدیریت دارایی<a class="anchor" href="#section-24-2" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>درصد دارایی‌های دارای شناسنامه کامل؛</li><li>درصد دارایی‌های دارای مسئول مشخص؛</li><li>درصد سرویس‌های انجام‌شده در موعد؛</li><li>مدت توقف تجهیزات؛</li><li>هزینه نگهداری؛</li><li>نرخ خرابی تکراری؛</li><li>دقت امتیاز آمادگی؛</li><li>میزان ردیابی‌پذیری رویدادها.</li></ul>
+<h3 id="section-24-3" class="subsection-title"><span>۲۴-۳</span>معیارهای RAG<a class="anchor" href="#section-24-3" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>Precision@K؛</li><li>Recall@K؛</li><li>MRR؛</li><li>دقت بازیابی سند معتبر؛</li><li>دقت استناد؛</li><li>میزان وفاداری پاسخ به منبع؛</li><li>درصد ادعاهای بدون شواهد؛</li><li>توانایی خودداری از پاسخ در نبود اطلاعات.</li></ul>
+<h3 id="section-24-4" class="subsection-title"><span>۲۴-۴</span>معیارهای DSS<a class="anchor" href="#section-24-4" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>میزان تطابق با نظر خبرگان؛</li><li>ثبات رتبه‌بندی؛</li><li>قابلیت توضیح؛</li><li>حساسیت به وزن معیارها؛</li><li>نرخ تأیید پیشنهادها؛</li><li>کاهش زمان تصمیم‌گیری.</li></ul>
+<h3 id="section-24-5" class="subsection-title"><span>۲۴-۵</span>معیارهای امنیتی<a class="anchor" href="#section-24-5" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>تعداد تلاش‌های غیرمجاز مسدودشده؛</li><li>میزان موفقیت آزمون‌های کنترل دسترسی؛</li><li>مقاومت در برابر تزریق پرامپت؛</li><li>جلوگیری از بازیابی اسناد غیرمجاز؛</li><li>کامل‌بودن گزارش ممیزی؛</li><li>زمان شناسایی رخداد امنیتی.</li></ul>
+<h3 id="section-24-6" class="subsection-title"><span>۲۴-۶</span>معیارهای کاربری<a class="anchor" href="#section-24-6" aria-label="پیوند مستقیم">#</a></h3>
+<ul class="feature-list"><li>رضایت کاربران؛</li><li>سهولت یادگیری؛</li><li>سرعت انجام وظایف؛</li><li>میزان اعتماد؛</li><li>نرخ استفاده؛</li><li>تعداد خطاهای کاربری؛</li><li>کیفیت توضیحات سامانه.</li></ul></div>
+</section><section class="document-section" id="section-25" data-section="25">
+<header class="section-header">
+  <span class="section-number">25</span>
+  <div><p class="section-kicker">فصل ۲۵</p><h2>طراحی آزمایش<a class="anchor" href="#section-25" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p class="lead-label">برای ارزیابی، دو روش با هم مقایسه می‌شوند:</p>
+<ol class="number-list"><li>روش فعلی یا سنتی؛</li><li>استفاده از سامانه پیشنهادی.</li></ol>
+<p class="lead-label">گروهی از کاربران، مجموعه‌ای از وظایف مشابه را با هر دو روش انجام می‌دهند:</p>
+<ul class="feature-list"><li>یافتن سابقه دارایی؛</li><li>تهیه گزارش موجودی؛</li><li>شناسایی اقلام نیازمند سرویس؛</li><li>تحلیل مغایرت؛</li><li>بازیابی دستورالعمل؛</li><li>اولویت‌بندی درخواست‌ها.</li></ul>
+<p>زمان، دقت، تعداد خطا، کیفیت تصمیم و رضایت کاربران اندازه‌گیری خواهد شد.</p></div>
+</section><section class="document-section" id="section-26" data-section="26">
+<header class="section-header">
+  <span class="section-number">26</span>
+  <div><p class="section-kicker">فصل ۲۶</p><h2>الزامات آزمون و اعتبارسنجی<a class="anchor" href="#section-26" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p class="lead-label">آزمون‌ها شامل موارد زیر خواهند بود:</p>
+<ul class="feature-list"><li>آزمون عملکردی؛</li><li>آزمون بار؛</li><li>آزمون امنیت؛</li><li>آزمون دسترسی؛</li><li>آزمون کیفیت داده؛</li><li>آزمون دقت RAG؛</li><li>آزمون توهم مدل؛</li><li>آزمون اسناد متناقض؛</li><li>آزمون سند منقضی‌شده؛</li><li>آزمون تزریق پرامپت؛</li><li>آزمون قطع ارتباط؛</li><li>آزمون پشتیبان‌گیری؛</li><li>آزمون بازیابی پس از خرابی.</li></ul>
+<p>منابع NIST برای عملیاتی‌کردن AI RMF، بر آزمون، ارزیابی، تأیید و اعتبارسنجی سامانه‌های هوش مصنوعی تأکید دارند. بنابراین، ارزیابی سامانه نباید فقط به دقت پاسخ محدود شود و باید امنیت، اعتمادپذیری، ردیابی و عملکرد سازمانی را نیز پوشش دهد.</p></div>
+</section><section class="document-section" id="section-27" data-section="27">
+<header class="section-header">
+  <span class="section-number">27</span>
+  <div><p class="section-kicker">فصل ۲۷</p><h2>نوآوری‌های طرح<a class="anchor" href="#section-27" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h3 id="section-27-1" class="subsection-title"><span>۲۷-۱</span>ترکیب انبارداری و مدیریت چرخه عمر<a class="anchor" href="#section-27-1" aria-label="پیوند مستقیم">#</a></h3>
+<p>پروژه فقط وضعیت موجودی را ثبت نمی‌کند، بلکه کل عمر دارایی را پوشش می‌دهد.</p>
+<h3 id="section-27-2" class="subsection-title"><span>۲۷-۲</span>شناسنامه دیجیتال و دوقلوی دیجیتال<a class="anchor" href="#section-27-2" aria-label="پیوند مستقیم">#</a></h3>
+<p>هر دارایی دارای پرونده یکپارچه و نمایش وضعیت جاری خواهد بود.</p>
+<h3 id="section-27-3" class="subsection-title"><span>۲۷-۳</span>ترکیب DSS و LLM<a class="anchor" href="#section-27-3" aria-label="پیوند مستقیم">#</a></h3>
+<p>DSS محاسبه و اولویت‌بندی را انجام می‌دهد و LLM نتیجه را توضیح می‌دهد.</p>
+<h3 id="section-27-4" class="subsection-title"><span>۲۷-۴</span>RAG چندلایه<a class="anchor" href="#section-27-4" aria-label="پیوند مستقیم">#</a></h3>
+<p>داده ساخت‌یافته، اسناد، روابط گرافی و زمان اعتبار به‌صورت هم‌زمان در پاسخ استفاده می‌شوند.</p>
+<h3 id="section-27-5" class="subsection-title"><span>۲۷-۵</span>گراف دانش دارایی‌ها<a class="anchor" href="#section-27-5" aria-label="پیوند مستقیم">#</a></h3>
+<p>روابط میان دارایی، شخص، قطعه، واحد، سند و تعمیر به شکل صریح ثبت می‌شوند.</p>
+<h3 id="section-27-6" class="subsection-title"><span>۲۷-۶</span>امتیاز آمادگی قابل‌توضیح<a class="anchor" href="#section-27-6" aria-label="پیوند مستقیم">#</a></h3>
+<p>سامانه علاوه بر امتیاز، دلیل کاهش یا افزایش آمادگی را ارائه می‌دهد.</p>
+<h3 id="section-27-7" class="subsection-title"><span>۲۷-۷</span>گواهی شواهد<a class="anchor" href="#section-27-7" aria-label="پیوند مستقیم">#</a></h3>
+<p>هر پاسخ مهم دارای منبع، تاریخ، اطمینان و اطلاعات ناقص است.</p>
+<h3 id="section-27-8" class="subsection-title"><span>۲۷-۸</span>معماری حساس به مجوز<a class="anchor" href="#section-27-8" aria-label="پیوند مستقیم">#</a></h3>
+<p>سطح دسترسی پیش از بازیابی اطلاعات اعمال می‌شود.</p>
+<h3 id="section-27-9" class="subsection-title"><span>۲۷-۹</span>تحلیل سناریو<a class="anchor" href="#section-27-9" aria-label="پیوند مستقیم">#</a></h3>
+<p>مدیر می‌تواند پیامد گزینه‌های مختلف را پیش از تصمیم بررسی کند.</p>
+<h3 id="section-27-10" class="subsection-title"><span>۲۷-۱۰</span>طراحی آفلاین‌محور<a class="anchor" href="#section-27-10" aria-label="پیوند مستقیم">#</a></h3>
+<p>عملیات ضروری می‌تواند در زمان قطع ارتباط نیز ادامه یابد و بعداً همگام‌سازی شود.</p></div>
+</section><section class="document-section" id="section-28" data-section="28">
+<header class="section-header">
+  <span class="section-number">28</span>
+  <div><p class="section-kicker">فصل ۲۸</p><h2>محدودیت‌های احتمالی<a class="anchor" href="#section-28" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><ol class="number-list"><li>کیفیت نامناسب داده‌های قدیمی؛</li><li>نبود شناسه یکسان برای دارایی‌ها؛</li><li>مقاومت کاربران در برابر تغییر؛</li><li>کمبود داده برای آموزش یا ارزیابی؛</li><li>محدودیت زیرساخت سخت‌افزاری؛</li><li>دشواری دسترسی به اسناد معتبر؛</li><li>تعدد نسخه‌های دستورالعمل‌ها؛</li><li>حساسیت اطلاعات؛</li><li>محدودیت اتصال میان سامانه‌ها؛</li><li>احتمال اعتماد بیش از حد به هوش مصنوعی؛</li><li>پیچیدگی مدیریت سطوح دسترسی؛</li><li>هزینه برچسب‌گذاری دارایی‌های موجود.</li></ol></div>
+</section><section class="document-section" id="section-29" data-section="29">
+<header class="section-header">
+  <span class="section-number">29</span>
+  <div><p class="section-kicker">فصل ۲۹</p><h2>راهکارهای کاهش محدودیت‌ها<a class="anchor" href="#section-29" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><ul class="feature-list"><li>اجرای پایلوت محدود؛</li><li>استفاده از داده مصنوعی یا ناشناس‌سازی‌شده؛</li><li>تعریف استاندارد شناسه دارایی؛</li><li>پاک‌سازی مرحله‌ای داده؛</li><li>آموزش کاربران؛</li><li>حفظ روش دستی پشتیبان؛</li><li>استقرار داخلی مدل؛</li><li>استفاده از مدل کوچک‌تر در صورت محدودیت سخت‌افزار؛</li><li>تأیید انسانی؛</li><li>ایجاد کمیته حاکمیت داده؛</li><li>مدیریت نسخه اسناد؛</li><li>انجام آزمون امنیتی مستقل.</li></ul></div>
+</section><section class="document-section" id="section-30" data-section="30">
+<header class="section-header">
+  <span class="section-number">30</span>
+  <div><p class="section-kicker">فصل ۳۰</p><h2>ساختار اجرایی پروژه<a class="anchor" href="#section-30" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><div class="role-grid"><article class="role-card"><h3>مدیر پروژه</h3><p>مسئول هماهنگی، برنامه‌ریزی و کنترل پیشرفت.</p></article><article class="role-card"><h3>تحلیل‌گر کسب‌وکار و فرایند</h3><p>مسئول شناخت فرایندهای انبار، دارایی و تعمیرات.</p></article><article class="role-card"><h3>کارشناس انبار و لجستیک</h3><p>مسئول تعریف نیازها، قواعد و سناریوها.</p></article><article class="role-card"><h3>کارشناس مدیریت دارایی</h3><p>مسئول طراحی چرخه عمر و شاخص‌ها.</p></article><article class="role-card"><h3>معمار نرم‌افزار</h3><p>مسئول طراحی معماری فنی.</p></article><article class="role-card"><h3>متخصص داده و هوش مصنوعی</h3><p>مسئول DSS، RAG، پیش‌بینی و ارزیابی.</p></article><article class="role-card"><h3>برنامه‌نویس Backend و Frontend</h3><p>مسئول توسعه نرم‌افزار.</p></article><article class="role-card"><h3>کارشناس امنیت</h3><p>مسئول کنترل دسترسی و آزمون امنیتی.</p></article><article class="role-card"><h3>کارشناس تضمین کیفیت</h3><p>مسئول طراحی و اجرای آزمون‌ها.</p></article></div></div>
+</section><section class="document-section" id="section-31" data-section="31">
+<header class="section-header">
+  <span class="section-number">31</span>
+  <div><p class="section-kicker">فصل ۳۱</p><h2>زمان‌بندی پیشنهادی<a class="anchor" href="#section-31" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><div class="table-wrap"><table><thead><tr><th scope="col">مرحله</th><th scope="col">فعالیت</th><th scope="col">مدت</th></tr></thead><tbody><tr><td>۱</td><td>شناخت وضعیت موجود و نیازسنجی</td><td>۴ هفته</td></tr><tr><td>۲</td><td>تحلیل فرایندها و طراحی مفهومی</td><td>۴ هفته</td></tr><tr><td>۳</td><td>طراحی مدل داده و آنتولوژی</td><td>۴ هفته</td></tr><tr><td>۴</td><td>پاک‌سازی و آماده‌سازی داده</td><td>۵ هفته</td></tr><tr><td>۵</td><td>توسعه هسته مدیریت دارایی</td><td>۶ هفته</td></tr><tr><td>۶</td><td>توسعه ورود، خروج و زنجیره تحویل</td><td>۴ هفته</td></tr><tr><td>۷</td><td>توسعه داشبورد و گزارش‌ها</td><td>۴ هفته</td></tr><tr><td>۸</td><td>توسعه RAG و پایگاه دانش</td><td>۶ هفته</td></tr><tr><td>۹</td><td>توسعه موتور DSS</td><td>۵ هفته</td></tr><tr><td>۱۰</td><td>یکپارچه‌سازی و آزمون داخلی</td><td>۴ هفته</td></tr><tr><td>۱۱</td><td>اجرای پایلوت</td><td>۵ هفته</td></tr><tr><td>۱۲</td><td>ارزیابی، اصلاح و مستندسازی</td><td>۵ هفته</td></tr></tbody></table></div><p class="summary-note">مدت کل پیشنهادی: حدود ۵۶ هفته</p><p>در صورت محدودشدن دامنه نمونه اولیه، مدت اجرا می‌تواند به حدود ۹ ماه کاهش یابد.</p></div>
+</section><section class="document-section" id="section-32" data-section="32">
+<header class="section-header">
+  <span class="section-number">32</span>
+  <div><p class="section-kicker">فصل ۳۲</p><h2>مراحل بلوغ پروژه<a class="anchor" href="#section-32" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h4 class="content-heading">فاز اول: دیجیتالی‌سازی و ردیابی</h4>
+<ul class="feature-list"><li>ثبت دارایی؛</li><li>شناسنامه دیجیتال؛</li><li>QR Code؛</li><li>ورود و خروج؛</li><li>زنجیره تحویل؛</li><li>داشبورد پایه.</li></ul>
+<h4 class="content-heading">فاز دوم: مدیریت دانش</h4>
+<ul class="feature-list"><li>مخزن اسناد؛</li><li>RAG؛</li><li>پرسش‌وپاسخ؛</li><li>پاسخ مستند؛</li><li>کنترل نسخه اسناد.</li></ul>
+<h4 class="content-heading">فاز سوم: پشتیبانی تصمیم</h4>
+<ul class="feature-list"><li>DSS؛</li><li>امتیاز آمادگی؛</li><li>اولویت‌بندی؛</li><li>پیش‌بینی موجودی؛</li><li>تحلیل سناریو.</li></ul>
+<h4 class="content-heading">فاز چهارم: هوشمندسازی پیشرفته</h4>
+<ul class="feature-list"><li>گراف دانش؛</li><li>Graph RAG؛</li><li>کشف ناهنجاری؛</li><li>RFID؛</li><li>دوقلوی دیجیتال؛</li><li>اتصال کنترل‌شده به سایر سامانه‌ها.</li></ul></div>
+</section><section class="document-section" id="section-33" data-section="33">
+<header class="section-header">
+  <span class="section-number">33</span>
+  <div><p class="section-kicker">فصل ۳۳</p><h2>خروجی‌های قابل تحویل<a class="anchor" href="#section-33" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><ol class="number-list"><li>سند نیازمندی‌های سامانه؛</li><li>نقشه فرایندهای موجود و مطلوب؛</li><li>مدل داده دارایی‌ها؛</li><li>آنتولوژی و گراف دانش؛</li><li>نرم‌افزار نمونه اولیه؛</li><li>پایگاه داده نمونه؛</li><li>شناسنامه دیجیتال دارایی؛</li><li>داشبورد آمادگی؛</li><li>موتور RAG؛</li><li>موتور DSS؛</li><li>رابط پرسش‌وپاسخ؛</li><li>سامانه ثبت و ممیزی؛</li><li>گزارش آزمون امنیتی؛</li><li>گزارش ارزیابی فنی؛</li><li>راهنمای کاربری؛</li><li>راهنمای استقرار؛</li><li>سند مدیریت ریسک؛</li><li>نقشه راه توسعه سازمانی؛</li><li>گزارش نهایی پژوهش؛</li><li>مقاله یا گزارش علمی قابل استخراج.</li></ol></div>
+</section><section class="document-section" id="section-34" data-section="34">
+<header class="section-header">
+  <span class="section-number">34</span>
+  <div><p class="section-kicker">فصل ۳۴</p><h2>منافع مورد انتظار<a class="anchor" href="#section-34" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><h4 class="content-heading">منافع عملیاتی</h4>
+<ul class="feature-list"><li>افزایش شفافیت موجودی؛</li><li>کاهش خطا؛</li><li>کاهش زمان جست‌وجو؛</li><li>شناسایی سریع مغایرت؛</li><li>بهبود برنامه سرویس؛</li><li>کاهش توقف دارایی؛</li><li>افزایش آمادگی.</li></ul>
+<h4 class="content-heading">منافع مدیریتی</h4>
+<ul class="feature-list"><li>دسترسی به داشبورد یکپارچه؛</li><li>تصمیم‌گیری مستند؛</li><li>مقایسه سناریوها؛</li><li>مشاهده روندها؛</li><li>شناسایی گلوگاه‌ها؛</li><li>بهبود تخصیص منابع.</li></ul>
+<h4 class="content-heading">منافع اقتصادی</h4>
+<ul class="feature-list"><li>کاهش سفارش غیرضروری؛</li><li>کاهش موجودی راکد؛</li><li>افزایش عمر مفید دارایی؛</li><li>کاهش هزینه تعمیرات ناگهانی؛</li><li>استفاده بهتر از موجودی بین انبارها.</li></ul>
+<h4 class="content-heading">منافع نظارتی</h4>
+<ul class="feature-list"><li>ثبت زنجیره تحویل؛</li><li>افزایش ردیابی؛</li><li>تسهیل بازرسی؛</li><li>جلوگیری از تغییر بدون سابقه؛</li><li>افزایش پاسخ‌گویی.</li></ul>
+<h4 class="content-heading">منافع دانشی</h4>
+<ul class="feature-list"><li>حفظ تجربه کارشناسان؛</li><li>دسترسی سریع به دستورالعمل‌ها؛</li><li>جلوگیری از استفاده از سند منسوخ؛</li><li>ایجاد حافظه سازمانی.</li></ul></div>
+</section><section class="document-section" id="section-35" data-section="35">
+<header class="section-header">
+  <span class="section-number">35</span>
+  <div><p class="section-kicker">فصل ۳۵</p><h2>تحلیل هزینه و فایده<a class="anchor" href="#section-35" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>هزینه‌های اصلی پروژه شامل توسعه نرم‌افزار، پاک‌سازی داده، تهیه زیرساخت، برچسب‌گذاری دارایی‌ها، آموزش کاربران و نگهداری سامانه خواهد بود.</p>
+<p class="lead-label">در مقابل، منافع پروژه می‌تواند از مسیرهای زیر ایجاد شود:</p>
+<ul class="feature-list"><li>کاهش زمان نیروی انسانی؛</li><li>کاهش مغایرت؛</li><li>کاهش خریدهای تکراری؛</li><li>کاهش خرابی ناشی از تأخیر در سرویس؛</li><li>کاهش موجودی راکد؛</li><li>افزایش استفاده مجدد از دارایی‌های موجود؛</li><li>کاهش زمان ممیزی؛</li><li>افزایش عمر تجهیزات.</li></ul>
+<p>برای محاسبه دقیق بازگشت سرمایه، باید خط پایه وضعیت فعلی اندازه‌گیری شود. نمونه اولیه می‌تواند داده لازم برای تحلیل اقتصادی توسعه سازمانی را فراهم کند.</p></div>
+</section><section class="document-section" id="section-36" data-section="36">
+<header class="section-header">
+  <span class="section-number">36</span>
+  <div><p class="section-kicker">فصل ۳۶</p><h2>ریسک‌های اجرایی<a class="anchor" href="#section-36" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><div class="table-wrap"><table><thead><tr><th scope="col">ریسک</th><th scope="col">احتمال</th><th scope="col">اثر</th><th scope="col">راهکار</th></tr></thead><tbody><tr><td>کیفیت پایین داده</td><td>زیاد</td><td>زیاد</td><td>پاک‌سازی و پایلوت محدود</td></tr><tr><td>مقاومت کاربران</td><td>متوسط</td><td>زیاد</td><td>مشارکت کاربران و آموزش</td></tr><tr><td>محدودیت زیرساخت</td><td>متوسط</td><td>متوسط</td><td>معماری مقیاس‌پذیر</td></tr><tr><td>نشت اطلاعات</td><td>کم تا متوسط</td><td>بسیار زیاد</td><td>استقرار داخلی و کنترل دسترسی</td></tr><tr><td>پاسخ نادرست LLM</td><td>متوسط</td><td>زیاد</td><td>RAG، استناد و تأیید انسانی</td></tr><tr><td>گستردگی بیش از حد</td><td>زیاد</td><td>زیاد</td><td>فازبندی و تعریف MVP</td></tr><tr><td>تغییر نیازها</td><td>متوسط</td><td>متوسط</td><td>توسعه تکرارشونده</td></tr><tr><td>وابستگی به فناوری خاص</td><td>متوسط</td><td>متوسط</td><td>معماری ماژولار</td></tr><tr><td>شکست یکپارچه‌سازی</td><td>متوسط</td><td>زیاد</td><td>API استاندارد و اجرای مرحله‌ای</td></tr></tbody></table></div></div>
+</section><section class="document-section" id="section-37" data-section="37">
+<header class="section-header">
+  <span class="section-number">37</span>
+  <div><p class="section-kicker">فصل ۳۷</p><h2>حداقل محصول قابل ارائه یا MVP<a class="anchor" href="#section-37" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p class="lead-label">برای جلوگیری از گستردگی بیش از حد، نسخه اولیه شامل موارد زیر باشد:</p>
+<ol class="number-list"><li>ثبت ۵۰۰ تا ۱۰۰۰ دارایی نمونه؛</li><li>مدیریت سه گروه دارایی؛</li><li>شناسنامه دیجیتال؛</li><li>QR Code؛</li><li>ثبت ورود، خروج، تحویل و بازگشت؛</li><li>داشبورد موجودی؛</li><li>گزارش مغایرت؛</li><li>ثبت تعمیرات؛</li><li>RAG روی مجموعه محدود اسناد؛</li><li>پرسش‌وپاسخ مستند؛</li><li>امتیاز آمادگی اولیه؛</li><li>DSS برای اولویت‌بندی بازرسی و تعمیر؛</li><li>کنترل دسترسی؛</li><li>ثبت رویدادهای ممیزی.</li></ol>
+<aside class="callout"><strong>نکته</strong><p>این MVP به‌اندازه کافی کامل است که ارزش ایده را نشان دهد و در عین حال، امکان پیاده‌سازی واقعی داشته باشد.</p></aside></div>
+</section><section class="document-section" id="section-38" data-section="38">
+<header class="section-header">
+  <span class="section-number">38</span>
+  <div><p class="section-kicker">فصل ۳۸</p><h2>سناریوی پیشنهادی برای ارائه نهایی<a class="anchor" href="#section-38" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p class="lead-label">در نسخه نمایشی، داده‌های زیر آماده شود:</p>
+<ul class="feature-list"><li>سه انبار؛</li><li>۵۰۰ دارایی؛</li><li>۳۰ خودرو؛</li><li>۱۰۰ ابزار سریال‌دار؛</li><li>۲۰۰ قلم قطعه؛</li><li>تعدادی اقلام دارای تاریخ اعتبار؛</li><li>چند مغایرت عمدی؛</li><li>چند سرویس عقب‌افتاده؛</li><li>چند سند منقضی‌شده؛</li><li>چند سابقه تعمیر ناقص.</li></ul>
+<p class="lead-label">مدیر سؤال می‌پرسد:</p>
+<blockquote>«وضعیت آمادگی دارایی‌ها چیست و پنج اقدام اولویت‌دار این هفته کدام‌اند؟»</blockquote>
+<p class="lead-label">سامانه موارد زیر را ارائه می‌دهد:</p>
+<ul class="feature-list"><li>درصد آمادگی کلی؛</li><li>دارایی‌های نیازمند اقدام؛</li><li>قطعات زیر نقطه سفارش؛</li><li>سرویس‌های عقب‌افتاده؛</li><li>مغایرت‌های مهم؛</li><li>پیشنهاد انتقال موجودی؛</li><li>دلایل پیشنهادها؛</li><li>منابع و اسناد؛</li><li>میزان اطمینان؛</li><li>امکان تأیید یا رد.</li></ul>
+<aside class="callout"><strong>نکته</strong><p>این سناریو به‌صورت ملموس نشان می‌دهد که پروژه فقط یک چت‌بات یا نرم‌افزار انبار نیست، بلکه یک سامانه واقعی مدیریت دارایی و پشتیبانی تصمیم است.</p></aside></div>
+</section><section class="document-section" id="section-39" data-section="39">
+<header class="section-header">
+  <span class="section-number">39</span>
+  <div><p class="section-kicker">فصل ۳۹</p><h2>نتیجه‌گیری<a class="anchor" href="#section-39" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><p>مدیریت دارایی‌های فیزیکی در سازمان‌های نظامی، موضوعی فراتر از ثبت موجودی است. برای رسیدن به مدیریت مؤثر، باید بتوان چرخه کامل عمر دارایی، وضعیت فنی، محل استقرار، مسئولیت، هزینه، سوابق تعمیر، اعتبار اسناد و میزان آمادگی آن را مشاهده و تحلیل کرد.</p>
+<p>طرح پیشنهادی، یک سامانه یکپارچه برای مدیریت انبار، دارایی‌های فیزیکی و آمادگی لجستیکی ارائه می‌دهد. در این سامانه، پایگاه داده مرجع حقیقت عددی است، DSS محاسبات و اولویت‌بندی را انجام می‌دهد، RAG اسناد و شواهد را بازیابی می‌کند، گراف دانش روابط را نشان می‌دهد و مدل زبانی نتایج را به شکلی انسانی و قابل‌فهم توضیح می‌دهد.</p>
+<p>مهم‌ترین اصل سامانه این است که هوش مصنوعی جایگزین مسئول انسانی نمی‌شود. تصمیم نهایی، تغییر موجودی، تحویل دارایی و سایر اقدامات حساس فقط از طریق کاربران دارای مجوز انجام خواهد شد. هوش مصنوعی نقش دستیار تحلیلی و پشتیبان تصمیم را خواهد داشت.</p>
+<p class="lead-label">مزیت اصلی این پروژه در ترکیب شش مفهوم مکمل است:</p>
+<p>شناسنامه دیجیتال دارایی، زنجیره تحویل قابل‌ممیزی، دوقلوی دیجیتال، DSS توضیح‌پذیر، RAG مستند و معماری امنیتی مبتنی بر حداقل دسترسی.</p>
+<p>اجرای موفق نمونه اولیه می‌تواند زمینه توسعه سامانه در سطح چند انبار، چند یگان و در نهایت سطح سازمانی را فراهم کند. همچنین ساختار ماژولار آن امکان اتصال کنترل‌شده به سامانه‌های مالی، تعمیراتی، منابع انسانی و لجستیکی را در مراحل بعدی ایجاد خواهد کرد.</p>
+<p>در مجموع، این طرح می‌تواند مدیریت دارایی را از یک فرایند عمدتاً ثبتی و واکنشی، به یک فرایند یکپارچه، داده‌محور، پیش‌نگر، قابل‌توضیح و قابل‌ممیزی تبدیل کند.</p></div>
+</section><section class="document-section" id="section-40" data-section="40">
+<header class="section-header">
+  <span class="section-number">40</span>
+  <div><p class="section-kicker">فصل ۴۰</p><h2>منابع و چارچوب‌های مرجع پیشنهادی<a class="anchor" href="#section-40" aria-label="پیوند مستقیم">#</a></h2></div>
+</header>
+<div class="section-body"><ol class="number-list"><li>استاندارد ISO 55000:2024 برای مفاهیم، اصول و مدیریت چرخه عمر دارایی‌ها.</li><li>چارچوب NIST AI RMF 1.0 برای مدیریت ریسک و اعتمادپذیری سامانه‌های هوش مصنوعی.</li><li>نمایه هوش مصنوعی مولد NIST برای مدیریت ریسک‌های ویژه مدل‌های مولد.</li><li>منابع NIST برای آزمون، ارزیابی، تأیید و اعتبارسنجی سامانه‌های هوش مصنوعی.</li><li>مدل بلوغ Zero Trust سازمان CISA برای طراحی امنیت هویت، دستگاه، شبکه، برنامه و داده.</li><li>استاندارد جهانی ردیابی GS1 برای شناسایی، ثبت و تبادل رویدادهای دارایی و زنجیره تأمین.</li></ol></div>
+</section></div>
+
+      <footer class="site-footer">
+        <strong>IALR-C2</strong>
+        <p>سامانه هوشمند فرماندهی دارایی و آمادگی لجستیکی</p>
+        <a href="#top">بازگشت به ابتدای صفحه ↑</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
